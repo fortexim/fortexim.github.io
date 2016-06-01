@@ -1,21 +1,28 @@
 $greycolor: #F1F1F1;
 
-html {
-    filter: expression(document.execCommand("BackgroundImageCache", false, true));
+@mixin tablet-portrait() {
+    @media (max-width: 780px) {
+        @content;
+    }
 }
+
 html, body {
     height: 100%;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 nav  {
+    @include tablet-portrait {
+        color: yellow;
+    }
     z-index: 2;
     left:0; right:0;
     position: fixed;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    width: 50vw;
+    min-width: 650px;
     background-color: $greycolor;
     vertical-align: center;
     height: 70px;
@@ -43,20 +50,21 @@ nav  {
             color: red;
         }
     }
-}
-
-nav ul:first-child {
-    float: left;
-}
-
-nav ul:last-child {
-    float: right;
-    margin-right: 10px;
+    
+    ul:first-child {
+        float: left;
+    }
+    
+    ul:last-child {
+        float: right;
+        margin-right: 10px;
+    }
+    
 }
 
 .wrapper {
     position: relative;
-    display: table;
+    // display: table;
     width: 100%;
     height: 100%; /* For at least Firefox */
     min-height: 100%;
@@ -64,23 +72,33 @@ nav ul:last-child {
 }
 
 .innerleft {
-    position: relative;
+    position: fixed;
     width: 50%;
-    height: 100vh;
-    display: table-cell;
+    height: 100%;
+    float: left;
+    // display: table-cell;
     vertical-align: top;
     background: url(/assets/images/bg.jpg);
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
+    @include tablet-portrait {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 40%;
+    }
 
     .logo {
-
-        position: fixed;
-        left: 25%;
+        position: relative;
         top: 30%;
-        transform: translateX(-50%) scale(0.7);
+        transform: scale(0.7);
+        z-index: 2;
+        @include tablet-portrait {
+            top: 20%;
+        }
 
         .logographic {
             margin-bottom: 15px;
@@ -89,21 +107,31 @@ nav ul:last-child {
 }
 
 .innerright {
-    display: table;
+    position: relative;
     width: 50%;
     background-color: red;
-    display: table-cell;
-    vertical-align: top;
+    float: right;
+    height: 100%;
+    @include tablet-portrait {
+        height: 60%;
+        width: 100%;
+        float: left;
+        left: 0;
+    }
 }
 
 .shadow {
     height: 100%;
     width: inherit;
-    display: table-cell;
+    // display: table-cell;
     position: fixed;
     box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
 }
 .content {
-    position:relative;
+    display: none;
+    position: relative;
+    width: 200px;
+    // float: left;
+    margin: 0 auto;
     padding-top: 1600px;
 }

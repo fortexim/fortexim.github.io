@@ -9,4 +9,4 @@ var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)/-
 console.log(w)
 var l = document.getElementsByClassName('innerleft');
 l[0].style.backgroundPositionX = w.toString()+"px";
-console.log("hog")
+console.log("hog");
