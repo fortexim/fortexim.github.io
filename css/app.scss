@@ -1,0 +1,109 @@
+$greycolor: #F1F1F1;
+
+html {
+    filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+html, body {
+    height: 100%;
+    background-color: #fff;
+}
+
+nav  {
+    z-index: 2;
+    left:0; right:0;
+    position: fixed;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    background-color: $greycolor;
+    vertical-align: center;
+    height: 70px;
+    border: {
+        style: solid;
+        radius: 40px;
+        color: white;
+        width: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        display: inline-block;
+        margin-top: 12px;
+
+        li {
+            float: left;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .active {
+            color: red;
+        }
+    }
+}
+
+nav ul:first-child {
+    float: left;
+}
+
+nav ul:last-child {
+    float: right;
+    margin-right: 10px;
+}
+
+.wrapper {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    text-align: center;
+}
+
+.innerleft {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: top;
+    background: url(/assets/images/bg.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .logo {
+
+        position: fixed;
+        left: 25%;
+        top: 30%;
+        transform: translateX(-50%) scale(0.7);
+
+        .logographic {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.innerright {
+    display: table;
+    width: 50%;
+    background-color: red;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.shadow {
+    height: 100%;
+    width: inherit;
+    display: table-cell;
+    position: fixed;
+    box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.content {
+    position:relative;
+    padding-top: 1600px;
+}
