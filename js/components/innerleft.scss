@@ -1,0 +1,87 @@
+@import '../../css/mixins.scss';
+
+@mixin tablet-mobile-state(){
+    @include tablet-portrait {
+         width: 100%;
+    }
+     @include mobile-small-landscape {
+        width: 100%;
+     }
+}
+.innerleft {
+    position: relative;
+    // width: 50%;
+    height: 100%;
+    float: left;
+    vertical-align: top;
+    background: url(/assets/images/bg.jpg);
+    background-position-x: -25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: width 0.3s ease;
+
+
+    @include tablet-portrait {
+        // position: relative;
+        // float: left;
+        width: 100%;
+        height: 40%;
+        background-size: initial;
+        background-position: center top;
+    }
+    @include mobile-small-landscape {
+        width: 100%;
+        height: 100%;
+        background-position: initial;
+        background-attachment: initial;
+    }
+}
+
+.innerleftHomePageState {
+    @include tablet-mobile-state();
+    width: 50%;
+}
+
+.innerleftAboutPageState {
+    @include tablet-mobile-state();
+    width: 30%;
+}
+
+.innerleftProductPageState {
+    @include tablet-mobile-state();
+    width: 25%;
+}
+
+.innerleftContactPageState {
+    @include tablet-mobile-state();
+    width: 50%;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 15vw;
+
+
+    @include mobile-small-landscape {
+        width: 35vmin;
+    }
+    @include mobile-portrait {
+        width: 30vmin;
+    }
+}
+
+.logotitle {
+    transform: scale(1.6) translate(0px,10px);
+}
+
+.shadow {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}

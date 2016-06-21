@@ -1,0 +1,31 @@
+@mixin tablet-portrait() {
+    @media (max-width: 800px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin mobile-large-landscape() {
+    @media (max-width: 800px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile-small-landscape() {
+    @media (max-width: 800px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile-portrait() {
+    @media (max-width: 600px) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin google-font($font) {
+    $font: unquote($font);
+    $url: "https://fonts.googleapis.com/css?family=";
+    @import url($url + $font);
+}
+
+$greycolor: #F1F1F1;

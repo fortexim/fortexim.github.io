@@ -1,0 +1,61 @@
+@import '../../css/mixins.scss';
+
+$font: "Open Sans", sans-serif;
+
+@mixin tablet-mobile-state(){
+    @include tablet-portrait {
+         width: 100%;
+    }
+     @include mobile-small-landscape {
+        width: 100%;
+     }
+}
+
+.innerright {
+    font-family: $font;
+    position: relative;
+    background-color: maroon;
+    float: left;
+    height: 100%;
+    transition: width 0.3s ease;
+    
+
+    @include tablet-portrait {
+        height: 60%;
+        width: 100%;
+        float: left;
+        left: 0;
+    }
+
+    @include mobile-small-landscape {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.innerrightHomePageState {
+    @include tablet-mobile-state();
+    width: 50%;
+}
+
+.innerrightAboutPageState {
+    @include tablet-mobile-state();
+    width: 70%;
+}
+
+.innerrightProductPageState {
+    @include tablet-mobile-state();
+    width: 75%;
+}
+
+.innerrightContactPageState {
+    @include tablet-mobile-state();
+    width: 50%;
+}
+
+.shadow {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}

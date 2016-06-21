@@ -18,15 +18,16 @@
   },
   "babel": {
     "presets": [
-      "es2015", "react"
+      "es2015",
+      "react"
     ]
   },
   "author": "Norbert Fehérvári",
   "license": "MIT",
   "dependencies": {
-    "history": "^3.0.0",
+    "gsap": "^1.18.5",
+    "pubsub-js": "^1.5.3",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "react-router": "^2.4.1"
+    "react-dom": "^15.1.0"
   }
 }
