@@ -11,6 +11,7 @@ export default class Innerleft extends React.Component {
         this.state = {
             pageStyle: null
         };
+        this.setPageStyle(true, this.props.startRoute);
 	}
 
     componentWillMount() {
@@ -22,31 +23,32 @@ export default class Innerleft extends React.Component {
     }
 
     hashChanged(msg, data) {
-        this.setPageState(data);
+        this.setPageStyle(false, data);
     }
 
-    handlePageState(state){
-        this.setState({pageStyle:state});
+    handlePageState(style){
+        this.setState({pageStyle:style});
     }
 
-    setPageState(route){      
+    setPageStyle(isStarter, route){      
         switch (route.id) {
             case ROUTING.HOME.id:
-                this.handlePageState(styles.innerleftHomePageState);
+                this.state.pageStyle = styles.HomePageState;
                 break;
             case ROUTING.ABOUT.id:
-                this.handlePageState(styles.innerleftAboutPageState);
+                this.state.pageStyle = styles.AboutPageState;
                 break;
             case ROUTING.PRODUCTS.id:
-                this.handlePageState(styles.innerleftProductPageState);
+                this.state.pageStyle = styles.ProductPageState;
                 break;
             case ROUTING.CONTACT.id:
-                this.handlePageState(styles.innerleftContactPageState);
+                this.state.pageStyle = styles.ContactPageState;
                 break;
         
             default:
                 break;
         }
+        if (isStarter===false) this.handlePageState(this.state.pageStyle, route.id);
     }
 
 

@@ -2,16 +2,19 @@ var PubSub = require('pubsub-js');
 import React from "react";
 import ReactDOM from 'react-dom';
 // import TweenMax from 'gsap';
-import {Routes, ROUTING} from '../Routes';
+import {ROUTING} from '../Routes';
 import styles from './innerright.scss';
+import Contact from './Contact.jsx';
 
 export default class Innerright extends React.Component {
 	constructor(props) {
 		super(props);
         this.state = {
-            pageStyle: null
+            pageStyle: null,
+            page: this.props.startRoute.id
         };
-		
+        this.setPageStyle(true, this.props.startRoute);
+        this.contactContent = null;
 	}
 	componentWillMount() {
         var token = PubSub.subscribe( 'HASH', this.hashChanged.bind(this) );
@@ -22,37 +25,49 @@ export default class Innerright extends React.Component {
     }
 
     hashChanged(msg, data) {
-        this.setPageState(data);
+        this.setPageStyle(false, data);
     }
 
-     handlePageState(state){
-        this.setState({pageStyle:state});
+    handlePageState(style, route){
+        this.setState({pageStyle:style, page:route});
     }
 
-    setPageState(route){      
+    renderContact() {
+        return (<Contact page={this.state.page}/>);
+    }
+
+    setPageStyle(isStarter, route){      
         switch (route.id) {
             case ROUTING.HOME.id:
-                this.handlePageState(styles.innerrightHomePageState);
+                this.state.pageStyle = styles.HomePageState;
                 break;
             case ROUTING.ABOUT.id:
-                this.handlePageState(styles.innerrightAboutPageState);
+                this.state.pageStyle = styles.AboutPageState;
                 break;
             case ROUTING.PRODUCTS.id:
-                this.handlePageState(styles.innerrightProductPageState);
+                this.state.pageStyle = styles.ProductPageState;
                 break;
             case ROUTING.CONTACT.id:
-                this.handlePageState(styles.innerrightContactPageState);
+                this.state.pageStyle = styles.ContactPageState;
                 break;
-        
             default:
                 break;
         }
+        if (isStarter===false) this.handlePageState(this.state.pageStyle, route.id);
     }
 
     render() {
+        // console.log(this.state.page);
+        if (this.state.pageStyle === styles.ContactPageState) {
+            this.contactContent = this.renderContact();
+        } else {
+            this.contactContent = null;
+        }
+        
 		return (
             <div className={this.state.pageStyle+" "+styles.innerright}>
 				<div className={styles.shadow}></div>
+                {this.contactContent}
 			</div>
 		);
 	}

@@ -4,19 +4,19 @@ import {Routes, ROUTING} from '../../Routes';
 import styles from './nav.scss';
 
 export default class Nav extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.MENU = {
             HOME: "Kezdőlap",
             PRODUCTS: "Termékek",
             ABOUT: "Rólunk",
             CONTACT: "Kapcsolat"
         }
-        this.setClassesToEmpty();
     }
     
     componentWillMount() {
         var token = PubSub.subscribe( 'HASH', this.hashChanged.bind(this) );
+        this.hashChanged(null, this.props.startRoute);
     }
 
     componentWillUnmount() {
@@ -41,7 +41,7 @@ export default class Nav extends React.Component {
             default:
                 break;
         }
-        this.forceUpdate();
+        if (msg!==null) this.forceUpdate();
         
     }
 

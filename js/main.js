@@ -9,12 +9,10 @@ const app = document.getElementById('app');
 var routie = new Routes();
 
 
-
 ReactDOM.render(
-    <Layout />, app
+    <Layout startRoute={routie.currentRoute} />, app
 );
 
-routie.hashChanged();
 
 /*if (matchMedia) {
   var mq = window.matchMedia("(min-width: 500px)");

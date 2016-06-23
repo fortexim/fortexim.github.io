@@ -11,9 +11,9 @@ export default class Layout extends React.Component {
     render() {
 		return (
 			<div id={style.rootdiv}>
-				<Nav />
+				<Nav startRoute= {this.props.startRoute} />
 				<Navicon />
-				<Wrapper />
+				<Wrapper startRoute= {this.props.startRoute} />
 			</div>
 		);
 	}

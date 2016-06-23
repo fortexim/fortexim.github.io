@@ -11,8 +11,8 @@ export default class Wrapper extends React.Component {
     render() {
 		return (
 			<div className={styles.wrapper}>
-				<Innerleft />
-				<Innerright />
+				<Innerleft startRoute= {this.props.startRoute} />
+				<Innerright startRoute= {this.props.startRoute} />
 			</div>	
 		);
 	}

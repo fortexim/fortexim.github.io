@@ -38,22 +38,22 @@
     }
 }
 
-.innerleftHomePageState {
+.HomePageState {
     @include tablet-mobile-state();
     width: 50%;
 }
 
-.innerleftAboutPageState {
+.AboutPageState {
     @include tablet-mobile-state();
     width: 30%;
 }
 
-.innerleftProductPageState {
+.ProductPageState {
     @include tablet-mobile-state();
     width: 25%;
 }
 
-.innerleftContactPageState {
+.ContactPageState {
     @include tablet-mobile-state();
     width: 50%;
 }
