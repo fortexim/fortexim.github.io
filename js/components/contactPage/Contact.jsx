@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import {ROUTING} from '../Routes';
+import {ROUTING} from '../../Routes';
 import CompanyMap from './googlemaps/CompanyMap.jsx';
 import styles from './contact.scss';
 
@@ -30,13 +30,13 @@ export default class Contact extends React.Component {
 
     render() {
         this.createClass();
-        console.log(this.activeClass);
         
         return (
             <div className={this.activeClass+" "+styles.contact}>
                 <div className={styles.container}>
                     <div className={styles.text}>
-                        <p>Fortexim Kereskedelmi és Szolgáltató Kft. 6000 Kecskemét, Forrás u. 2/A</p>
+                        <p>Fortexim Kereskedelmi és Szolgáltató Kft.</p>
+                        <p>6000 Kecskemét, Forrás u. 2/A</p>
                         <p>Közösségi adószám: HU24066138</p>
                         <p>Telephely: 4244 Újfehértó, Egészségház u. 11.</p>
                         <p>Tel.: +3630-2296-492</p>

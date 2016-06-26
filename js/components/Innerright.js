@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 // import TweenMax from 'gsap';
 import {ROUTING} from '../Routes';
 import styles from './innerright.scss';
-import Contact from './Contact.jsx';
+import Contact from './contactPage/Contact.jsx';
+import About from './aboutPage/About.jsx';
 
 export default class Innerright extends React.Component {
 	constructor(props) {
@@ -14,7 +15,6 @@ export default class Innerright extends React.Component {
             page: this.props.startRoute.id
         };
         this.setPageStyle(true, this.props.startRoute);
-        this.contactContent = null;
 	}
 	componentWillMount() {
         var token = PubSub.subscribe( 'HASH', this.hashChanged.bind(this) );
@@ -30,10 +30,6 @@ export default class Innerright extends React.Component {
 
     handlePageState(style, route){
         this.setState({pageStyle:style, page:route});
-    }
-
-    renderContact() {
-        return (<Contact page={this.state.page}/>);
     }
 
     setPageStyle(isStarter, route){      
@@ -57,17 +53,12 @@ export default class Innerright extends React.Component {
     }
 
     render() {
-        // console.log(this.state.page);
-        if (this.state.pageStyle === styles.ContactPageState) {
-            this.contactContent = this.renderContact();
-        } else {
-            this.contactContent = null;
-        }
         
 		return (
             <div className={this.state.pageStyle+" "+styles.innerright}>
 				<div className={styles.shadow}></div>
-                {this.contactContent}
+                <Contact page={this.state.page}/>
+                <About page={this.state.page}/>
 			</div>
 		);
 	}
