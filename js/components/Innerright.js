@@ -6,6 +6,7 @@ import {ROUTING} from '../Routes';
 import styles from './innerright.scss';
 import Contact from './contactPage/Contact.jsx';
 import About from './aboutPage/About.jsx';
+import Products from './productsPage/Products.jsx'
 
 export default class Innerright extends React.Component {
 	constructor(props) {
@@ -59,6 +60,7 @@ export default class Innerright extends React.Component {
 				<div className={styles.shadow}></div>
                 <Contact page={this.state.page}/>
                 <About page={this.state.page}/>
+                <Products page={this.state.page}/>
 			</div>
 		);
 	}

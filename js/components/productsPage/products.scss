@@ -1,1 +1,61 @@
 @import '../../../css/mixins.scss';
+.productWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.menuContainer {
+    width: 33.5%;
+    height: 100%;
+    float: left;
+    background: url(/assets/images/warehouse_cropped.jpg);
+    background-position-x: -10vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    ul {
+        text-transform: uppercase;
+        list-style-type: none;
+        margin-top: 130px;
+        padding: 0;
+        display: inline-block;
+        
+        li {
+            margin: 20px 0 20px 0;
+            background-color: #f1f1f1;
+            border-radius: 30px;
+            border: 10px solid white;
+
+            &:first-child {
+                border-style: outset;
+            }
+            a {
+                padding: 4px 8px 4px 8px;
+                text-decoration: none;
+                color: inherit;
+                display: inline-block;
+            }
+        }
+    }
+}
+.active {
+    background-color: maroon !important;
+    color: white;
+}
+.productsContainer {
+    width: 66.5%;
+    height: 100%;
+    float: right;
+    background: url(/assets/images/ship.jpg);
+    // background-position-x: -21vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.productsHolder {
+    overflow: auto;
+    height: calc(100% - 150px);
+    padding-top: 150px;
+}

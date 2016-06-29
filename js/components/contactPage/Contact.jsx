@@ -7,6 +7,7 @@ import styles from './contact.scss';
 export default class Contact extends React.Component {
     constructor(props) {
 		super(props);
+        this.tl = new TimelineLite();
         this.state = {
             markers: [{
             position: {
@@ -19,20 +20,31 @@ export default class Contact extends React.Component {
         }
 	}
 
+    componentDidMount(){
+        this.contactNode = ReactDOM.findDOMNode(this.refs.contact);
+        this.createClass();
+    }
+    componentDidUpdate() {
+        this.createClass();
+    }
 
     createClass() {
         if (this.props.page===ROUTING.CONTACT.id) {
-            this.activeClass = styles.active;
+            this.tl.set(this.contactNode, {display:"block"})
+                .to(this.contactNode,0.5, {opacity:1});
+            // this.activeClass = styles.active;
         } else {
-            this.activeClass = "";
+            this.tl.to(this.contactNode,0.5, {opacity:0})
+                .set(this.contactNode, {display:"none"});
+            // this.activeClass = "";
         }
     }
 
     render() {
-        this.createClass();
+        // this.createClass();
         
         return (
-            <div className={this.activeClass+" "+styles.contact}>
+            <div ref="contact" className={styles.contact}>
                 <div className={styles.container}>
                     <div className={styles.text}>
                         <p>Fortexim Kereskedelmi és Szolgáltató Kft.</p>

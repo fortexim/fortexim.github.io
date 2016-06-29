@@ -1,26 +1,40 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import {ROUTING} from '../../Routes';
+import {TweenMax, TimelineLite} from 'gsap';
 import styles from './about.scss';
 
 export default class About extends React.Component {
     constructor(props) {
 		super(props);
+        this.tl = new TimelineLite();
 	}
 
+    componentDidMount(){
+        this.aboutNode = ReactDOM.findDOMNode(this.refs.about);
+        this.createClass();
+    }
+    componentDidUpdate() {
+        this.createClass();
+    }
     createClass() {
+        this.tl.clear();
         if (this.props.page===ROUTING.ABOUT.id) {
-            this.activeClass = styles.active;
+            // this.activeClass = styles.active;
+            this.tl.set(this.aboutNode, {display:"block"})
+                .to(this.aboutNode,0.5, {opacity:1});
         } else {
-            this.activeClass = "";
+            // this.activeClass = "";
+            this.tl.to(this.aboutNode,0.5, {opacity:0})
+              .set(this.aboutNode, {display:"none"});
         }
     }
 
     render() {
-        this.createClass();
+        // this.createClass();
         
         return (
-            <div className={this.activeClass+" "+styles.about}>
+            <div ref="about" className={styles.about}>
                 <div className={styles.container}>
                     <div className={styles.text}>
                         <p>Cégünk, a FORTEXIM Kft. egy családi vállalkozásból alakult külkereskedelmi vállalat.</p>

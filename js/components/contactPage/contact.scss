@@ -5,7 +5,19 @@
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease;
+
+    @include mobile-small-landscape {
+        background-position-x: 0;
+        position: relative;
+    }
+
+    @include mobile-portrait {
+         position: relative;
+    }
+
+    @include tablet-portrait {
+        position: relative;
+    }
 }
 
 .container {

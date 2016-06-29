@@ -4,13 +4,21 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    display: none;
     pointer-events: none;
 
 
     @include mobile-small-landscape {
         background-position-x: 0;
+        position: relative;
+    }
+
+    @include mobile-portrait {
+         position: relative;
+    }
+
+    @include tablet-portrait {
+        position: relative;
     }
 
 }
@@ -42,6 +50,7 @@
     position: relative;
     padding: 20px;
     text-align: justify;
+    font-size: 1.9vmin;
 
     p {
         line-height: 1.7rem;
@@ -52,6 +61,7 @@
     }
 
     @include mobile-small-landscape {
+        font-size: initial;
         p {
             line-height: 1.5rem;
         }
@@ -65,7 +75,7 @@
     }
 }
 
-.active {
-    opacity: 1;
-    pointer-events: initial;
-}
+// .active {
+//     opacity: 1;
+//     pointer-events: initial;
+// }

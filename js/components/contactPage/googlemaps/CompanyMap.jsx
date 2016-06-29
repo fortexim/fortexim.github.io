@@ -12,13 +12,13 @@ import { GoogleMapLoader, GoogleMap, Marker } from "react-google-maps";
  */
 
 const CompanyMap = props => (
-  <section style={{ height: '280px',  width: '100%' }}>
+  <section style={{ height: '38vh',  width: '100%' }}>
     <GoogleMapLoader
       containerElement={
         <div
           {...props.containerElementProps}
           style={{
-            height: '280px', width: '100%'
+            height: '38vh', width: '100%'
           }}
         />
       }
