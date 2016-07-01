@@ -33,6 +33,7 @@ export default class Products extends React.Component {
     render() {
         return (
             <div ref="products" className={styles.productWrapper}>
+                <div className={styles.mobileMenu}></div>
                 <div className={styles.menuContainer}>
                     <ul>
                         <li className={styles.active} >
@@ -47,6 +48,16 @@ export default class Products extends React.Component {
                         <li>
                             <a href="">Italok</a>
                         </li>
+                        <li>
+                            <a href="">Italok</a>
+                        </li>
+                        <li>
+                            <a href="">Italok</a>
+                        </li>
+                        <li>
+                            <a href="">Italok</a>
+                        </li>
+                        
                     </ul>
                 </div>
                 <div className={styles.productsContainer}>
