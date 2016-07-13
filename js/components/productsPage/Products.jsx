@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import {ROUTING} from '../../Routes';
 import {TweenMax, TimelineLite} from 'gsap';
 import Product from './Product.jsx';
+import Menu from './Menu.jsx';
+import {ProductList, CATEGORIES} from '../../ProductList';
 import styles from './products.scss';
 
 export default class Products extends React.Component {
     constructor(props) {
 		super(props);
         this.tl = new TimelineLite();
+        console.log(CATEGORIES);
+        
 	}
 
     componentDidMount(){
@@ -33,33 +37,7 @@ export default class Products extends React.Component {
     render() {
         return (
             <div ref="products" className={styles.productWrapper}>
-                <div className={styles.mobileMenu}></div>
-                <div className={styles.menuContainer}>
-                    <ul>
-                        <li className={styles.active} >
-                            <a href="">Minden Termék</a>
-                        </li>
-                        <li>
-                            <a href="">Sütemények</a>
-                        </li>
-                        <li>
-                            <a href="">Cereáliák</a>
-                        </li>
-                        <li>
-                            <a href="">Italok</a>
-                        </li>
-                        <li>
-                            <a href="">Italok</a>
-                        </li>
-                        <li>
-                            <a href="">Italok</a>
-                        </li>
-                        <li>
-                            <a href="">Italok</a>
-                        </li>
-                        
-                    </ul>
-                </div>
+                <Menu />
                 <div className={styles.productsContainer}>
                     <div className={styles.productsHolder}>
                         <Product />

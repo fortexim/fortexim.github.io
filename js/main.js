@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from './components/Layout';
-import {Routes, ROUTING} from './Routes';
+import {Routes} from './Routes';
+import {Localization}from './localization/Localization';
+import {LANGUAGES, ROUTING} from './Settings';
 require('../css/normalize.css');
 require('../css/app.scss');
 
 const app = document.getElementById('app');
 var routie = new Routes();
+let loc = new Localization(LANGUAGES.HU);
 
 
 ReactDOM.render(

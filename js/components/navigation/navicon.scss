@@ -1,11 +1,11 @@
 @import '../../../css/mixins.scss';
 
-.nav-icon {
+.navIcon {
     display: none;
     width: 50px;
     top: 5vw;
     left: 5vw;
-    position: fixed;
+    position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -17,6 +17,10 @@
     }
     @include mobile-large-landscape {
         display: block;
+    }
+
+    @include mobile-portrait {
+        transform: scale(0.7);
     }
   span {
         display: block;
@@ -44,23 +48,24 @@
             transform-origin: left center;
         }
   }
-  &.open {
-            span {
-                &:nth-child(1){
-                    transform: rotate(45deg);
-                    top: 0px;
-                    left: 8px;
-                }
-                &:nth-child(2){
-                    transform: rotate(45deg);
-                    width: 0%;
-                    opacity: 0;
-                }
-                &:nth-child(3){
-                    transform: rotate(-45deg);
-                    top: 39px;
-                    left: 8px;
-                }
-            }
+}
+
+.open {
+    span {
+        &:nth-child(1){
+            transform: rotate(45deg);
+            top: 0px;
+            left: 8px;
         }
+        &:nth-child(2){
+            transform: rotate(45deg);
+            width: 0%;
+            opacity: 0;
+        }
+        &:nth-child(3){
+            transform: rotate(-45deg);
+            top: 39px;
+            left: 8px;
+        }
+    }
 }

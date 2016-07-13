@@ -35,7 +35,7 @@
     }
 
     @include mobile-portrait {
-        position: fixed;
+        // position: fixed;
         z-index: 4;
     }
 }

@@ -1,0 +1,182 @@
+@import '../../../css/mixins.scss';
+
+.menuHolder {
+    height: 100%;
+    width: 33.5%;
+    float: left;
+    overflow: auto;
+
+
+    @include mobile-portrait {
+        width: 100%;
+        height: initial;
+        background: maroon;
+    }
+
+    @include mobile-small-landscape {
+        width: 100%;
+        height: initial;
+        background: maroon;
+    }
+}
+
+.mobileMenu {
+    display: none;
+    z-index: 2;
+
+    @include mobile-portrait {
+        display: block;
+        width: 100%;
+        height: 50px;
+        background-color: moccasin;
+        position: absolute;
+    }
+    
+    @include mobile-small-landscape {
+        display: block;
+        width: 100%;
+        height: 50px;
+        background-color: moccasin;
+        position: absolute;
+    }
+}
+
+.productNavIcon {
+    display: none;
+    width: 50px;
+    top: 14px;
+    left: 5vw;
+    position: relative;
+    transform: rotate(0deg) scale(0.5);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 11;
+    opacity: 0.7;
+
+    @include tablet-portrait {
+        display: block;
+    }
+    @include mobile-large-landscape {
+        display: block;
+    }
+
+  span {
+        display: block;
+        position: absolute;
+        height: 9px;
+        width: 100%;
+        background: maroon;
+        border-radius: 10px;
+        border: 2px solid white;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1){
+            top: 0px;
+            transform-origin: left center;
+        }
+        &:nth-child(2){
+            top: 16px;
+            transform-origin: left center;
+        }
+        &:nth-child(3){
+            top: 32px;
+            transform-origin: left center;
+        }
+  }
+}
+
+.activeCategory {
+    display: inline-block;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    background-color: maroon;
+    margin-top: 10px;
+}
+
+.menuContainer {
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: url(/assets/images/warehouse_cropped.jpg);
+    background-position-x: -10vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // overflow: auto;
+
+    ul {
+        text-transform: uppercase;
+        list-style-type: none;
+        margin-top: 130px;
+        padding: 0;
+        display: inline-block;
+
+        @include mobile-portrait {
+            margin-top: 50px;
+        }
+
+        @include mobile-small-landscape {
+            margin-top: 50px;
+        }
+        
+        li {
+            margin: 20px 0 20px 0;
+            background-color: #f1f1f1;
+            border-radius: 30px;
+            border: 10px solid white;
+
+            &:first-child {
+                border-style: outset;
+            }
+            a {
+                padding: 4px 8px 4px 8px;
+                text-decoration: none;
+                color: inherit;
+                display: inline-block;
+            }
+        }
+    }
+
+    @include mobile-portrait {
+        display: none;
+        width: 100%;
+        height: initial;
+        background: maroon;
+    }
+
+    @include mobile-small-landscape {
+        display: none;
+        width: 100%;
+        height: initial;
+        background: maroon;
+    }
+}
+
+.active {
+    background-color: maroon !important;
+    color: white;
+}
+
+.open {
+    span {
+        &:nth-child(1){
+            transform: rotate(45deg);
+            top: 0px;
+            left: 8px;
+        }
+        &:nth-child(2){
+            transform: rotate(45deg);
+            width: 0%;
+            opacity: 0;
+        }
+        &:nth-child(3){
+            transform: rotate(-45deg);
+            top: 39px;
+            left: 8px;
+        }
+    }
+}
