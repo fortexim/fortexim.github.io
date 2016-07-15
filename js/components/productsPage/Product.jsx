@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import {ROUTING} from '../../Routes';
+import {ROUTING} from '../../Settings';
 import {TweenMax, TimelineLite} from 'gsap';
 import styles from './product.scss';
 

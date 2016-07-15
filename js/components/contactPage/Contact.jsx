@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import {ROUTING} from '../../Routes';
+import {ROUTING} from '../../Settings';
 import CompanyMap from './googlemaps/CompanyMap.jsx';
 import styles from './contact.scss';
 

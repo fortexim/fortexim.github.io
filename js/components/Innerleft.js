@@ -2,7 +2,7 @@ var PubSub = require('pubsub-js');
 import React from "react";
 import ReactDOM from 'react-dom';
 // import TweenMax from 'gsap';
-import {Routes, ROUTING} from '../Routes';
+import {ROUTING} from '../Settings';
 import styles from './innerleft.scss';
 
 export default class Innerleft extends React.Component {

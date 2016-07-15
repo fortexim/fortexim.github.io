@@ -2,7 +2,7 @@ var PubSub = require('pubsub-js');
 import React from "react";
 import ReactDOM from 'react-dom';
 // import TweenMax from 'gsap';
-import {ROUTING} from '../Routes';
+import {ROUTING} from '../Settings';
 import styles from './innerright.scss';
 import Contact from './contactPage/Contact.jsx';
 import About from './aboutPage/About.jsx';

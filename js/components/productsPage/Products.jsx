@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import {ROUTING} from '../../Routes';
+import {ROUTING} from '../../Settings';
 import {TweenMax, TimelineLite} from 'gsap';
 import Product from './Product.jsx';
 import Menu from './Menu.jsx';
@@ -11,7 +11,7 @@ export default class Products extends React.Component {
     constructor(props) {
 		super(props);
         this.tl = new TimelineLite();
-        console.log(CATEGORIES);
+        // console.log(CATEGORIES);
         
 	}
 

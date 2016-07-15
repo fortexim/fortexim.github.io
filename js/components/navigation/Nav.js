@@ -70,9 +70,9 @@ export default class Nav extends React.Component {
             <nav className={(this.state.navicon? "" : styles.open) + " "+ styles.navigation}>
                 <ul>
                     <li><a className={this.homeClass} href="/#">{this.loc.ROUTES.HOME.value}</a></li>
-                    <li><a className={this.productClass} href="#products">{this.loc.ROUTES.PRODUCTS.value}</a></li>
-                    <li><a className={this.aboutClass} href="#about">{this.loc.ROUTES.ABOUT.value}</a></li>
-                    <li><a className={this.contactClass} href="#contact">{this.loc.ROUTES.CONTACT.value}</a></li>
+                    <li><a className={this.productClass} href={"#"+this.loc.ROUTES.PRODUCTS.hash}>{this.loc.ROUTES.PRODUCTS.value}</a></li>
+                    <li><a className={this.aboutClass} href={"#"+this.loc.ROUTES.ABOUT.hash}>{this.loc.ROUTES.ABOUT.value}</a></li>
+                    <li><a className={this.contactClass} href={"#"+this.loc.ROUTES.CONTACT.hash}>{this.loc.ROUTES.CONTACT.value}</a></li>
                 </ul>
                 <ul>
                     <li className={styles.active} onClick={this.setLanguage.bind(this, LANGUAGES.HU)}>HU</li>
