@@ -29,6 +29,7 @@ export default class Contact extends React.Component {
     }
 
     createClass() {
+        this.tl.clear();
         if (this.props.page===ROUTING.CONTACT.id) {
             this.tl.set(this.contactNode, {display:"block"})
                 .to(this.contactNode,0.5, {opacity:1});

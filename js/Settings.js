@@ -6,7 +6,7 @@ export const ROUTING = {
 };
 
 export const LANGUAGES = {
-    HU: {id: "HU"},
-    EN: {id: "EN"},
-    RO: {id: "RO"}
+    HU: {id: "HU", quickHash:"hu"},
+    EN: {id: "EN", quickHash:"en"},
+    RO: {id: "RO", quickHash:"ro"}
 }

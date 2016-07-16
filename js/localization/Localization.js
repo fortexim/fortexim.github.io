@@ -12,12 +12,9 @@ export class Localization {
         this.langObjectList = [];
         this.routes = null;
         
-        // Setting new languages
-        this.langObjectList.push(new Hu());
+        // Setting new languages - last is the default
         this.langObjectList.push(new En());
-
-        this.initLanguage();
-        this.setLangObject();
+        this.langObjectList.push(new Hu());
         
         if(!instance){
                 instance = this;
@@ -29,31 +26,14 @@ export class Localization {
         return instance;
     }
 
-    initLanguage(){
-        let currentHash = window.location.hash.substring(1);
-        let routes = this.getObjectFromLocals("ROUTES");
-        
-        for (let route in routes) {
-            for (let o in routes[route]) {
-                if (routes[route].hasOwnProperty(o)) {
-                    if (currentHash === routes[route][o].hash) {
-                        this._lang = routes[route].lang;
-                    }
-                    
-                }
-            }
-            
-        }
-    }
-
     get lang() {
         return this._lang;
     }
 
-    setLang(lang) {
+    setLang(lang, langChanged) {
         this._lang = lang;
         this.setLangObject();
-        this.routes.setRoutes();
+        if (langChanged) this.routes.setRoutes();
     }
 
     setLangObject() {
@@ -93,7 +73,7 @@ export class Localization {
         return this.dict;
     }
 
-    setRoutingLocalization(routes) {
+    setRoutesObject(routes){
         this.routes = routes;
     }
 }

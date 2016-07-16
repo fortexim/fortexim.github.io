@@ -8,8 +8,7 @@ require('../css/app.scss');
 
 const app = document.getElementById('app');
 let loc = new Localization();
-var routie = new Routes();
-loc.setRoutingLocalization(routie);
+var routie = new Routes(loc);
 
 
 ReactDOM.render(
