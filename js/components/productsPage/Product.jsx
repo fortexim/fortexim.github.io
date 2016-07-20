@@ -15,9 +15,15 @@ export default class Products extends React.Component {
         this.imgNode = ReactDOM.findDOMNode(this.refs.img);
         this.infoNode = ReactDOM.findDOMNode(this.refs.info);
         this.moreNode = ReactDOM.findDOMNode(this.refs.more);
+        this.productNode = ReactDOM.findDOMNode(this.refs.product);
+        this.mountAnimation();
     }
 
-    createClass() {
+    mountAnimation(){
+        TweenMax.to(this.productNode, 0.5, {opacity:1});
+    }
+
+    animateMore() {
         this.tl.clear();
         if (this.info === false) {
             this.tl.to(this.imgNode, 0.5, {opacity:0})
@@ -38,17 +44,18 @@ export default class Products extends React.Component {
 
     render() {
         return (
-            <div className={styles.product}>
+            <div ref="product" className={styles.product}>
             <div className={styles.imgInfoHolder}>
-                <img ref="img" src="assets/images/products/product.png" alt="product"/>
+                <img ref="img" src={this.props.data.img} alt="product"/>
                 <div ref="info" className={styles.info}>
-                    <p>This is information about the product.</p>
-                    <p>Ingredients: sugar, fat, arsenic-acid</p>
-                    <p>Logistics: 100 box / pallet</p>
+                    <p>{this.props.data.info}</p>
+                    <p>{this.props.data.logistics}</p>
                 </div>
             </div>
-                <p className={styles.name} >Chio Chips 40 g</p>
-                <p ref="more" className={styles.more} onClick={this.createClass.bind(this)}>További információk</p>
+                <p className={styles.name} >{this.props.data.name} 
+                    <span className={styles.weight}>{this.props.data.weight}</span>
+                </p>
+                <p ref="more" className={styles.more} onClick={this.animateMore.bind(this)}>További információk</p>
             </div>
         )
     }

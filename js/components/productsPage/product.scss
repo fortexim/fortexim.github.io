@@ -1,6 +1,7 @@
 @import '../../../css/mixins.scss';
 
 .product {
+    opacity: 0;
     background-color: white;
     width: 70%;
     height: 260px;
@@ -31,6 +32,11 @@
 
 .name {
     margin: 14px 0 0 0;
+}
+
+.weight {
+    margin-left: 20px;
+    font-style: italic;
 }
 
 .more {

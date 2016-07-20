@@ -11,6 +11,9 @@ export default class Products extends React.Component {
     constructor(props) {
 		super(props);
         this.tl = new TimelineLite();
+        this.state = {
+            activeCategory: CATEGORIES.ALL.id
+        }
         // console.log(CATEGORIES);
         
 	}
@@ -34,16 +37,32 @@ export default class Products extends React.Component {
         }
     }
 
+    filterProducts(product) {
+        if (product.category.id ===this.state.activeCategory) {
+            return true;
+        } else if (this.state.activeCategory === CATEGORIES.ALL.id) {
+            return true;
+        } else { return false}
+    }
+
+    setCategory(category){
+        this.setState({activeCategory:category});
+    }
+
+    renderProduct(){
+        // If you add a unique `key` attribute, then the component will remount.
+        return ProductList
+            .filter(this.filterProducts.bind(this))
+            .map((product, i) => <Product key={i+Math.random()} data={product} />);
+    }
+
     render() {
         return (
             <div ref="products" className={styles.productWrapper}>
-                <Menu />
+                <Menu setCategory={this.setCategory.bind(this)}/>
                 <div className={styles.productsContainer}>
                     <div className={styles.productsHolder}>
-                        <Product />
-                        <Product />
-                        <Product />
-                        <Product />
+                        {this.renderProduct()}
                     </div>
                 </div>
             </div>

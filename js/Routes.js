@@ -14,7 +14,6 @@ export class Routes {
     }
 
    initRoutes(){
-        let that = this;
         let validRoutes = new Set();
         let currentHash = this.getCurrentHash();
         let routes = this.localization.getObjectFromLocals("ROUTES");

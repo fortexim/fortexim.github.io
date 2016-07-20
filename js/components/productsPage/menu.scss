@@ -137,6 +137,7 @@
                 text-decoration: none;
                 color: inherit;
                 display: inline-block;
+                cursor: pointer;
             }
         }
     }
@@ -159,6 +160,7 @@
 .active {
     background-color: maroon !important;
     color: white;
+    transition: 0.5s background-color ease-in-out;
 }
 
 .open {
