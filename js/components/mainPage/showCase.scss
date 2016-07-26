@@ -1,0 +1,92 @@
+@import '../../../css/mixins.scss';
+
+.holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.showCase {
+    padding-top: 25vh;
+    @include tablet-portrait {
+        padding-top: 15vh;
+    }
+
+    @include mobile-small-landscape {
+        padding-top: 15vh;
+    }
+}
+
+.colorized {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    background-color: maroon;
+    transition: all 0.5s ease;
+}
+
+.products {
+    opacity: 0;
+    // transition: opacity 0.25s ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    img {
+        position: relative;
+        width: 60%;
+
+        @include mobile-small-landscape {
+            width: 40%;
+        }
+    }
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.buttons {
+    position: relative;
+    top: 25vw;
+    @include tablet-portrait {
+        top: 50vw;
+    }
+    @include mobile-small-landscape {
+        top: 33vw;
+    }
+}
+
+.button {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    /* background-color: white; */
+    margin: 30px 10px 0px 10px;
+    border: 6px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.activeButton {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 4px;
+    margin-left: 4px;
+    float: left;
+    transition: all 0.5s ease;
+}
+
+.inactiveButton {
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.activeProduct {
+    opacity: 1;
+    transition: opacity 0.25s ease 0.25s;
+}

@@ -54,6 +54,6 @@ module.exports = {
     // Create Sourcemaps for the bundle
     devtool: 'source-map',
     resolve: {
-        extensions: ['', '.js', '.es6']
+        extensions: ['', '.js', '.es6','.jsx']
     },
 };

@@ -16,10 +16,10 @@ $font: "Open Sans", sans-serif;
 .innerright {
     font-family: $font;
     position: relative;
-    background-color: maroon;
+    background-color: #ccc;
     float: left;
     height: 100%;
-    transition: width 0.3s ease;
+    transition: width 0.5s ease;
     
 
     @include tablet-portrait {

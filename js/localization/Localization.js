@@ -1,4 +1,5 @@
 import {LANGUAGES} from '../Settings';
+var PubSub = require('pubsub-js');
 import En from './EN';
 import Hu from './HU';
 
@@ -68,6 +69,7 @@ export class Localization {
         }
         return results;
     }
+
 
     getDict() {
         return this.dict;

@@ -10,19 +10,23 @@ export const CATEGORIES = {
 
 export const ProductList = [
     {
-        "name": "Product 1",
+        "name": "Amulet mineral water pH 9.2",
         "info": "This is information abt the product",
-        "weight": "40 g",
+        "weight": "1 L",
         "logistics": ["100 pcs / box", "100 box / pallet"],
-        "img": "assets/images/products/product.png",
+        "img": "assets/images/products/amulet.png",
+        "featuredImg":"assets/images/products/amulet.png",
+        "featuredColor":"mediumvioletred",
         "category": CATEGORIES.COOKIES
     },
     {
-        "name": "Product 2",
+        "name": "S Cookie",
         "info": "This is information abt the product",
-        "weight": "40 g",
+        "weight": "150 g",
         "logistics": ["300 pcs / box", "40 box / pallet"],
-        "img": "assets/images/products/product.png",
+        "img": "assets/images/products/s_suti.png",
+        "featuredImg":"assets/images/products/s_suti.png",
+        "featuredColor":"darkcyan",
         "category": CATEGORIES.CEREALS
     },
     {
@@ -31,6 +35,7 @@ export const ProductList = [
         "weight": "40 g",
         "logistics": ["3000 pcs / box", "40 box / pallet"],
         "img": "assets/images/products/product.png",
+        "featuredImg":"assets/images/products/product_featured.png",
         "category": CATEGORIES.SNACKS
     },
     {
@@ -39,6 +44,7 @@ export const ProductList = [
         "weight": "400 g",
         "logistics": ["500 pcs / box", "40 box / pallet"],
         "img": "assets/images/products/product.png",
+        "featuredImg":"assets/images/products/product_featured.png",
         "category": CATEGORIES.OTHERS
     },
     {
@@ -47,6 +53,7 @@ export const ProductList = [
         "weight": "1 L",
         "logistics": ["3100 pcs / box", "40 box / pallet"],
         "img": "assets/images/products/product.png",
+        "featuredImg":"",
         "category": CATEGORIES.DRINKS
     },
     {
@@ -55,6 +62,7 @@ export const ProductList = [
         "weight": "1 L",
         "logistics": ["3100 pcs / box", "40 box / pallet"],
         "img": "assets/images/products/product.png",
+        "featuredImg":"",
         "category": CATEGORIES.DRINKS
     },
 ];
