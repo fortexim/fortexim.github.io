@@ -91,7 +91,12 @@ export class Routes {
             this.localization.setLang(LANGUAGES.HU);
             this.currentRoute = ROUTING.HOME;
             return true;
-        } else {
+        } else if (hash === LANGUAGES.RO.quickHash) {
+            this.localization.setLang(LANGUAGES.RO);
+            this.currentRoute = ROUTING.HOME;
+            return true;
+        }
+         else {
             return false;
         }
     }

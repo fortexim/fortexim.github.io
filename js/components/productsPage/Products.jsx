@@ -4,19 +4,22 @@ import {ROUTING} from '../../Settings';
 import {TweenMax, TimelineLite} from 'gsap';
 import Product from './Product.jsx';
 import Menu from './Menu.jsx';
-import {ProductList, CATEGORIES} from '../../ProductList';
+import {Localization} from '../../localization/Localization';
 import styles from './products.scss';
 
 export default class Products extends React.Component {
     constructor(props) {
 		super(props);
         this.tl = new TimelineLite();
+        this.loc = Localization.getInstance().getDict();
         this.state = {
-            activeCategory: CATEGORIES.ALL.id
+            activeCategory: this.loc.CATEGORIES.ALL.id
         }
-        // console.log(CATEGORIES);
-        
 	}
+
+    componentWillUpdate(){
+        this.loc = Localization.getInstance().getDict();
+    }
 
     componentDidMount(){
         this.productsNode = ReactDOM.findDOMNode(this.refs.products);
@@ -40,7 +43,7 @@ export default class Products extends React.Component {
     filterProducts(product) {
         if (product.category.id ===this.state.activeCategory) {
             return true;
-        } else if (this.state.activeCategory === CATEGORIES.ALL.id) {
+        } else if (this.state.activeCategory === this.loc.CATEGORIES.ALL.id) {
             return true;
         } else { return false}
     }
@@ -51,7 +54,7 @@ export default class Products extends React.Component {
 
     renderProduct(){
         // If you add a unique `key` attribute, then the component will remount.
-        return ProductList
+        return this.loc.PRODUCTLIST
             .filter(this.filterProducts.bind(this))
             .map((product, i) => <Product key={i+Math.random()} data={product} />);
     }

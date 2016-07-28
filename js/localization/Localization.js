@@ -2,6 +2,7 @@ import {LANGUAGES} from '../Settings';
 var PubSub = require('pubsub-js');
 import En from './EN';
 import Hu from './HU';
+import Ro from './RO';
 
 let instance = null;
 
@@ -15,6 +16,7 @@ export class Localization {
         
         // Setting new languages - last is the default
         this.langObjectList.push(new En());
+        this.langObjectList.push(new Ro());
         this.langObjectList.push(new Hu());
         
         if(!instance){

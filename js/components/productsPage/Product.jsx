@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import {ROUTING} from '../../Settings';
 import {TweenMax, TimelineLite} from 'gsap';
+import {Localization} from '../../localization/Localization';
 import styles from './product.scss';
 
 export default class Products extends React.Component {
@@ -9,7 +10,12 @@ export default class Products extends React.Component {
 		super(props);
         this.info = false;
         this.tl = new TimelineLite();
+        this.loc = Localization.getInstance().getDict();
 	}
+
+    componentWillUpdate(){
+        this.loc = Localization.getInstance().getDict();
+    }
 
     componentDidMount(){
         this.imgNode = ReactDOM.findDOMNode(this.refs.img);
@@ -31,14 +37,14 @@ export default class Products extends React.Component {
             .set(this.infoNode, {display:"block"})
             .to(this.infoNode,0.5, {opacity:1});
             this.info = true;
-            this.moreNode.innerText = "Képek";
+            this.moreNode.innerText = this.loc.PRODUCT.PICTURES;
         } else {
             this.tl.to(this.infoNode, 0.5, {opacity:0})
             .set(this.infoNode, {display:"none"})
             .set(this.imgNode, {display:"block"})
             .to(this.imgNode,0.5, {opacity:1});
             this.info = false;
-            this.moreNode.innerText = "További Információk";
+            this.moreNode.innerText = this.loc.PRODUCT.MORE;
         }
     }
 
@@ -55,7 +61,7 @@ export default class Products extends React.Component {
                 <p className={styles.name} >{this.props.data.name} 
                     <span className={styles.weight}>{this.props.data.weight}</span>
                 </p>
-                <p ref="more" className={styles.more} onClick={this.animateMore.bind(this)}>További információk</p>
+                <p ref="more" className={styles.more} onClick={this.animateMore.bind(this)}>{this.loc.PRODUCT.MORE}</p>
             </div>
         )
     }

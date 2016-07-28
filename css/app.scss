@@ -1,16 +1,8 @@
 @import './mixins.scss';
-@include google-font("Open+Sans:400,300");
+@include google-font("Open+Sans:400,300,600");
 
 html, body {
     height: 100%;
     background-color: transparent;
     font-size: 1em;
-}
-
-:global .content {
-    display: none;
-    position: relative;
-    width: 200px;
-    margin: 0 auto;
-    padding-top: 1600px;
 }

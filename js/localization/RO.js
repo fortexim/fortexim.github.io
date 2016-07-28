@@ -1,58 +1,60 @@
 import {ROUTING, LANGUAGES} from '../Settings';
 
-export default class Hu {
-    constructor(){
-        this.lang = LANGUAGES.HU;
+export default class Ro {
+    constructor() {
+        this.lang = LANGUAGES.RO;
         this.ROUTES = {
-            HOME: {id: ROUTING.HOME.id, value: "Kezdőlap", hash:""},
-            PRODUCTS: {id: ROUTING.PRODUCTS.id, value: "Termékek", hash:"termekek"},
-            ABOUT: {id: ROUTING.ABOUT.id, value: "Rólunk", hash:"rolunk"},
-            CONTACT: {id: ROUTING.CONTACT.id, value: "Kapcsolat", hash:"kapcsolat"},
-            lang: LANGUAGES.HU
+            HOME: {id: ROUTING.HOME.id, value: "Home", hash:""},
+            PRODUCTS: {id: ROUTING.PRODUCTS.id, value: "Produse", hash:"produse"},
+            ABOUT: {id: ROUTING.ABOUT.id, value: "Despre", hash:"despre"},
+            CONTACT: {id: ROUTING.CONTACT.id, value: "Contact", hash:"informatii"},
+            lang: LANGUAGES.RO
         }
+
         this.ABOUT = {
-            P1: "Cégünk, a FORTEXIM Kft. egy családi vállalkozásból alakult külkereskedelmi vállalat.",
-            P2: "Vállalkozásunkat 1995-ben édességek és cereáliák előállítása és kereskedelme céljából alapítottuk, s később úgy döntöttünk, hogy nemzetközi kapcsolatainkat kihasználva és arra alapozva bővítjük profilunkat, így 2012-ben megalapítottuk a FORTEXIM Kft-t.",
-            P3: "Cégünk főként Magyarországon, Romániában és Szlovákiában végez értékesítést. Központi irodánk és telephelyünk Magyarországon található.",
-            P4: "Vállalatunk stabil banki kapcsolatokkal rendelkezik és a nehéz gazdasági környezet ellenére nyereséges évre számítunk. Vevőink stabil kiszolgálása céljából jelentős szállítói kapacitást illetve raktárbázist építettünk ki, és a jövőben további bővítést tervezünk.",
-            P5: "Üdvözlettel:",
-            P6: "Sztányi Antal ügyvezető igazgató"
+            P1: "Our company named FORTEXIM Kft. is a wholesale FMCG company which formed in 2012 from a successful family business which operated many years before that.",
+            P2: "The candy trade is our main function, in addition that we distribute many kind of products, cereals, energy drinks, cleaning and washing products etc.",
+            P3: "Our main area are Hungary, where our depot is placed, as well as Romania, Slovakia and Bulgaria.",
+            P4: "We hold stable bank connections and despite the challenging economic environment we expecting good returns for this year. ",
+            P5: "Sincerely:",
+            P6: "Sztányi Antal managing director"
         }
         this.CONTACT = {
-            P1: "Fortexim Kereskedelmi és Szolgáltató Kft.",
-            P2: "6000 Kecskemét, Forrás u. 2/A",
-            P3: "Közösségi adószám: HU24066138",
-            P4: "Telephely: 4244 Újfehértó, Egészségház u. 11.",
-            P5: "Tel.: +3630-2296-492",
-            P6: "Email: info [kukac] fortexim.hu"
+            P1: "Fortexim Ltd.",
+            P2: "Hungary, 6000 Kecskemét, Forrás u. 2/A",
+            P3: "VAT number: HU24066138",
+            P4: "Warehouse: Hungary, 4244 Újfehértó, Egészségház u. 11.",
+            P5: "Phone.: +3630-2296-492",
+            P6: "Email: info [@] fortexim.hu"
+        }
+        this.PRODUCT = {
+            PICTURES: "Pictures",
+            MORE: "More Information"
         }
         this.CATEGORIES = {
-            ALL:{id:"ALL", name:"MINDEN TERMÉK"},
-            COOKIES:{id:"COOKIES", name:"SÜTEMÉNYEK"},
-            CEREALS:{id:"CEREALS", name:"CEREÁLIÁK"},
-            SNACKS:{id:"SNACKS", name:"SNACKEK"},
-            DRINKS:{id:"DRINKS", name:"ITALOK"},
-            OTHERS:{id:"OTHERS", name:"EGYÉB TERMÉKEK"}
+            ALL:{id:"ALL", name:"All Products"},
+            COOKIES:{id:"COOKIES", name:"COOKIES"},
+            CEREALS:{id:"CEREALS", name:"CEREALS"},
+            SNACKS:{id:"SNACKS", name:"SNACKS"},
+            DRINKS:{id:"DRINKS", name:"DRINKS"},
+            OTHERS:{id:"OTHERS", name:"OTHERS"}
         };
-        this.PRODUCT = {
-            PICTURES: "Képek",
-            MORE: "További Információk"
-        }
+
         this.SHOWCASEPRODUCTS = [
             {
-                "name": "Fortexim Teasütemények",
-                "weight": "140 g",
+                "name": "Fortexim Cookies",
+                "weight": "150 g",
                 "featuredImg":"assets/images/products/s_suti.png",
                 "featuredColor":"maroon",
             },
             {
-                "name": "Freymas snack",
-                "weight": "40 g",
+                "name": "Freymas snacks",
+                "weight": "1 L",
                 "featuredImg":"assets/images/products/freymas.png",
                 "featuredColor":"#dc9701",
             },
             {
-                "name": "Amulet lúgosított víz pH 9,2",
+                "name": "Amulet mineral water pH 9.2",
                 "weight": "1.5 L",
                 "featuredImg":"assets/images/products/amulet.png",
                 "featuredColor":"mediumvioletred",
@@ -60,7 +62,7 @@ export default class Hu {
         ];
         this.PRODUCTLIST = [
         {
-            "name": "S Teasütemény",
+            "name": "S Cookie",
             "info": "This is information abt the product",
             "weight": "140 g",
             "logistics": ["300 pcs / box", "40 box / pallet"],
@@ -68,7 +70,7 @@ export default class Hu {
             "category": this.CATEGORIES.COOKIES
         },
         {
-            "name": "Csokis Perec Teasütemény",
+            "name": "Cocoa-Pretzel Cookie",
             "info": "This is information abt the product",
             "weight": "140 g",
             "logistics": ["3100 pcs / box", "40 box / pallet"],
@@ -76,7 +78,7 @@ export default class Hu {
             "category": this.CATEGORIES.COOKIES
         },
         {
-            "name": "Cukros Virág Teasütemény",
+            "name": "Sugary Flower Cookie",
             "info": "This is information abt the product",
             "weight": "140 g",
             "logistics": ["3100 pcs / box", "40 box / pallet"],
@@ -84,23 +86,23 @@ export default class Hu {
             "category": this.CATEGORIES.COOKIES
         },
         {
-            "name": "Freymas snack",
-            "info": "Termékinformáció",
+            "name": "Freymas snacks",
+            "info": "This is information abt the product",
             "weight": "40 g",
             "logistics": ["100 pcs / box", "100 box / pallet"],
             "img": "assets/images/products/freymas.png",
             "category": this.CATEGORIES.SNACKS
         },
         {
-            "name": "Amulet lúgosított víz pH 9,2",
+            "name": "Amulet mineral water pH 9.2",
             "info": "This is information abt the product",
-            "weight": "1,5 L",
+            "weight": "1.5 L",
             "logistics": ["3000 pcs / box", "40 box / pallet"],
             "img": "assets/images/products/amulet.png",
             "category": this.CATEGORIES.DRINKS
         },
         {
-            "name": "Pirított napraforgó",
+            "name": "Browned Sunflower Seed",
             "info": "This is information abt the product",
             "weight": "40 g / 100g",
             "logistics": ["500 pcs / box", "40 box / pallet"],
@@ -108,7 +110,7 @@ export default class Hu {
             "category": this.CATEGORIES.OTHERS
         },
         {
-            "name": "Gyümölcsízű kukoricapehely",
+            "name": "Fruit-Flavoured Cornflakes",
             "info": "This is information abt the product",
             "weight": "40 g",
             "logistics": ["3100 pcs / box", "40 box / pallet"],
@@ -116,7 +118,7 @@ export default class Hu {
             "category": this.CATEGORIES.CEREALS
         },
         {
-            "name": "Sós ízú Puffasztott kukoricapehely",
+            "name": "Salt-Flavoured Cornflakes",
             "info": "This is information abt the product",
             "weight": "70 g",
             "logistics": ["3100 pcs / box", "40 box / pallet"],
@@ -124,13 +126,14 @@ export default class Hu {
             "category": this.CATEGORIES.CEREALS
         },
         {
-            "name": "Kakaós ízű puffasztott kukoricapehely",
+            "name": "Cacao-Flavoured Cornflakes",
             "info": "This is information abt the product",
             "weight": "100 g",
             "logistics": ["3100 pcs / box", "40 box / pallet"],
             "img": "assets/images/products/kakaos.jpg",
             "category": this.CATEGORIES.CEREALS
         }
-    ];
+        ];
     }
+
 }

@@ -1,18 +1,23 @@
 import React from "react";
-import {CATEGORIES} from '../../ProductList';
+import {Localization} from '../../localization/Localization';
 import styles from './menu.scss';
 
 export default class Products extends React.Component {
     constructor(props) {
         super(props);
+        this.loc = Localization.getInstance().getDict();
+    }
+
+    componentWillUpdate(){
+        this.loc = Localization.getInstance().getDict();
     }
 
     onMenuClick(e){
         this.props.setCategory(e.target.getAttribute("data-category"));
         let lis = e.target.parentNode.parentNode.childNodes;
-        lis.forEach(function(li) {
-            li.setAttribute("class","")
-        }, this);
+        for (let i = 0; i<lis.length; i++) {
+             lis[i].setAttribute("class","");
+        }
         e.target.parentNode.setAttribute("class", styles.active);
         
         
@@ -21,10 +26,10 @@ export default class Products extends React.Component {
     renderMenus(){
         let menus = [];
         let index = 0;
-        for (let cat in CATEGORIES) {
+        for (let cat in this.loc.CATEGORIES) {
             menus.push(
             <li className={index===0 ? styles.active : ""} key={index++}>
-                <a data-category={CATEGORIES[cat].id} onClick = {this.onMenuClick.bind(this)}>{CATEGORIES[cat].name}</a>
+                <a data-category={this.loc.CATEGORIES[cat].id} onClick = {this.onMenuClick.bind(this)}>{this.loc.CATEGORIES[cat].name}</a>
             </li>);
         }
         return menus;

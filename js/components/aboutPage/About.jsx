@@ -20,9 +20,11 @@ export default class About extends React.Component {
         this.aboutNode = ReactDOM.findDOMNode(this.refs.about);
         this.createClass();
     }
+
     componentDidUpdate() {
         this.createClass();
     }
+    
     createClass() {
         this.tl.clear();
         if (this.props.page===ROUTING.ABOUT.id) {
@@ -39,22 +41,11 @@ export default class About extends React.Component {
             <div ref="about" className={styles.about}>
                 <div className={styles.container}>
                     <div className={styles.text}>
-                        <p>Cégünk, a FORTEXIM Kft. egy családi vállalkozásból alakult külkereskedelmi vállalat.</p>
-                        <p>Vállalkozásunkat 1995-ben édességek és cereáliák
-                        előállítása és kereskedelme céljából alapítottuk,
-                        s később úgy döntöttünk, hogy nemzetközi
-                        kapcsolatainkat kihasználva és arra alapozva bővítjük
-                        profilunkat, így 2012-ben megalapítottuk a FORTEXIM
-                        Kft-t.</p>
-                        <p>Cégünk főként Magyarországon, Romániában és
-                        Szlovákiában végez értékesítést. Központi irodánk és
-                        telephelyünk Magyarországon található.</p>
-                        <p>Vállalatunk stabil banki kapcsolatokkal rendelkezik
-                        és a nehéz gazdasági környezet ellenére nyereséges
-                        évre számítunk. Vevőink stabil kiszolgálása céljából
-                        jelentős szállítói kapacitást illetve raktárbázist
-                        építettünk ki, és a jövőben további bővítést tervezünk.</p>
-                        <p>Üdvözlettel:</p>
+                        <p>{this.loc.ABOUT.P1}</p>
+                        <p>{this.loc.ABOUT.P2}</p>
+                        <p>{this.loc.ABOUT.P3}</p>
+                        <p>{this.loc.ABOUT.P4}</p>
+                        <p>{this.loc.ABOUT.P5}</p>
                         <p>{this.loc.ABOUT.P6}</p>
                     </div>
                 </div>

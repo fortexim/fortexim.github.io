@@ -1,19 +1,16 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import {Localization} from '../../localization/Localization';
-import {ProductList} from '../../ProductList';
-// import {TweenMax} from 'gsap';
 import styles from './showCase.scss';
 
 export default class ShowCase extends React.Component {
 
     constructor(props) {
         super(props);
-        this.showCaseProducts = ProductList
-        .filter(this.filterButtons.bind(this));
+        this.loc = Localization.getInstance().getDict();
 
         //initial active product
-        this.activeProduct = this.showCaseProducts[0];
+        this.activeProduct = this.loc.SHOWCASEPRODUCTS[0];
 
         this.state = {
             activeProduct: this.activeProduct
@@ -21,26 +18,27 @@ export default class ShowCase extends React.Component {
         this.rotateProducts();
     }
 
+    componentWillUpdate(){
+        this.loc = Localization.getInstance().getDict();
+    }
+
+    componentWillReceiveProps() {
+        this.activeProduct = this.loc.SHOWCASEPRODUCTS[0];
+        this.setState({activeProduct: this.activeProduct});
+    }
+
     rotateProducts(){
         let that = this;
         let a = 0;
+        let len = this.loc.SHOWCASEPRODUCTS.length;
+        console.log(len);
+        
         this.rotator = window.setInterval(function(){
-            that.setActive(that.showCaseProducts[a%4]);
+            that.setActive(that.loc.SHOWCASEPRODUCTS[a%len]);
             a++;
         }, 5000);
     }
 
-    componentDidMount(){
-        this.productNode = ReactDOM.findDOMNode(this.refs.showProduct);
-        this.setActive(this.activeProduct);
-    }
-
-
-    filterButtons(product){
-        if (product.featuredImg !=="") {
-            return true;
-        }
-    }
 
     onClickButton(product){
         window.clearInterval(this.rotator);
@@ -54,20 +52,19 @@ export default class ShowCase extends React.Component {
     renderProduct(){
         let activeStyle = styles.activeProduct + " "+styles.products;
         let inActiveStyle = styles.products;
-        return this.showCaseProducts
+        return this.loc.SHOWCASEPRODUCTS
             .map((product, i) =>
-            <div key= {i} ref="showProduct" className={this.state.activeProduct===product? activeStyle : inActiveStyle }>
+            <div key= {i} className={this.state.activeProduct===product? activeStyle : inActiveStyle }>
                     <img src={this.state.activeProduct.featuredImg} alt=""/>
                     <div className={styles.title}>{this.state.activeProduct.name}</div>
             </div>);
-        
     }
 
     renderButtons() {
         let inActiveStyle = styles.activeButton + " "+styles.inactiveButton;
         let activeStyle = styles.activeButton;
 
-        return this.showCaseProducts
+        return this.loc.SHOWCASEPRODUCTS
             .map((product, i) => 
                     <div key= {i} className={styles.button} onClick={this.onClickButton.bind(this, product)}>
                         <div className={this.state.activeProduct===product? activeStyle : inActiveStyle}></div>
