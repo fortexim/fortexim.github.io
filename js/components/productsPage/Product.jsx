@@ -52,7 +52,7 @@ export default class Products extends React.Component {
         return (
             <div ref="product" className={styles.product}>
             <div className={styles.imgInfoHolder}>
-                <img ref="img" src={this.props.data.img} alt="product"/>
+                <a href={"http://fortexim.hu/"+this.props.data.img} target="_blank"><img ref="img" src={this.props.data.img} alt="product"/></a>
                 <div ref="info" className={styles.info}>
                     <p>{this.props.data.info}</p>
                     <p>{this.props.data.logistics}</p>

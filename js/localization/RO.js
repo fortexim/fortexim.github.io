@@ -37,6 +37,7 @@ export default class Ro {
             CEREALS:{id:"CEREALS", name:"CEREALS"},
             SNACKS:{id:"SNACKS", name:"SNACKS"},
             DRINKS:{id:"DRINKS", name:"DRINKS"},
+            PAPERS:{id:"PAPERS", name:"PAPER"},
             OTHERS:{id:"OTHERS", name:"OTHERS"}
         };
 
@@ -60,78 +61,158 @@ export default class Ro {
                 "featuredColor":"mediumvioletred",
             }
         ];
-        this.PRODUCTLIST = [
+         this.PRODUCTLIST = [
         {
             "name": "S Cookie",
-            "info": "This is information abt the product",
+            "info": "Fortexim private labeled brand",
             "weight": "140 g",
-            "logistics": ["300 pcs / box", "40 box / pallet"],
+            "logistics": ["28 pcs / box"," - ", "54 box / pallet"],
             "img": "assets/images/products/s_suti.png",
             "category": this.CATEGORIES.COOKIES
         },
         {
             "name": "Cocoa-Pretzel Cookie",
-            "info": "This is information abt the product",
+            "info": "Fortexim private labeled brand",
             "weight": "140 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["28 pcs / box"," - ", "54 box / pallet"],
             "img": "assets/images/products/csokis_perec.png",
             "category": this.CATEGORIES.COOKIES
         },
         {
-            "name": "Sugary Flower Cookie",
-            "info": "This is information abt the product",
+            "name": "Petit Cookie",
+            "info": "Fortexim private labeled brand",
             "weight": "140 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["28 pcs / box"," - ", "54 box / pallet"],
+            "img": "assets/images/products/petit.png",
+            "category": this.CATEGORIES.COOKIES
+        },
+        {
+            "name": "Minimix Cookie",
+            "info": "Fortexim private labeled brand",
+            "weight": "140 g",
+            "logistics": ["28 pcs / box"," - ", "54 box / pallet"],
+            "img": "assets/images/products/minimix.png",
+            "category": this.CATEGORIES.COOKIES
+        },
+        {
+            "name": "Sugary Flower Cookie",
+            "info": "Fortexim private labeled brand",
+            "weight": "140 g",
+            "logistics": ["28 pcs / box"," - ", "54 box / pallet"],
             "img": "assets/images/products/cukros_virag.png",
             "category": this.CATEGORIES.COOKIES
         },
         {
             "name": "Freymas snacks",
-            "info": "This is information abt the product",
+            "info": "",
             "weight": "40 g",
             "logistics": ["100 pcs / box", "100 box / pallet"],
             "img": "assets/images/products/freymas.png",
             "category": this.CATEGORIES.SNACKS
         },
         {
-            "name": "Amulet mineral water pH 9.2",
-            "info": "This is information abt the product",
+            "name": "Amulet alkaline water pH 9.2",
+            "info": "",
             "weight": "1.5 L",
-            "logistics": ["3000 pcs / box", "40 box / pallet"],
+            "logistics": ["6 pcs / box", "84 box / pallet"],
             "img": "assets/images/products/amulet.png",
             "category": this.CATEGORIES.DRINKS
         },
         {
-            "name": "Browned Sunflower Seed",
-            "info": "This is information abt the product",
-            "weight": "40 g / 100g",
-            "logistics": ["500 pcs / box", "40 box / pallet"],
+            "name": "Browned Sunflower Seed, salted and original",
+            "info": ["40g: ","100 pcs / box", "70 box / pallet"],
+            "weight": "40g/100g",
+            "logistics": ["180g: ","30 pcs / box", "70 box / pallet"],
             "img": "assets/images/products/napraforgo.png",
             "category": this.CATEGORIES.OTHERS
         },
         {
-            "name": "Fruit-Flavoured Cornflakes",
-            "info": "This is information abt the product",
+            "name": "Fruit-Flavoured Puffed Cornflakes",
+            "info": "",
             "weight": "40 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["40 pcs / box"],
             "img": "assets/images/products/gyumolcs.jpg",
             "category": this.CATEGORIES.CEREALS
         },
         {
-            "name": "Salt-Flavoured Cornflakes",
-            "info": "This is information abt the product",
+            "name": "Salt-Flavoured PuffedCornflakes",
+            "info": "",
             "weight": "70 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["30 pcs / box"],
             "img": "assets/images/products/nagysos.jpg",
             "category": this.CATEGORIES.CEREALS
         },
         {
-            "name": "Cacao-Flavoured Cornflakes",
-            "info": "This is information abt the product",
+            "name": "Cacao-Flavoured Puffed Cornflakes",
+            "info": "",
             "weight": "100 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["35 pcs / box"],
             "img": "assets/images/products/kakaos.jpg",
             "category": this.CATEGORIES.CEREALS
+        },
+        {
+            "name": "Mekkoo toilet paper, 2 layer",
+            "info": "",
+            "weight": "10 pcs",
+            "logistics": ["6 package / bag"," - ", "32 bag / raklap"],
+            "img": "assets/images/products/mekkoo_2r.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo toilet paper, 3 layer",
+            "info": "",
+            "weight": "10 pcs",
+            "logistics": ["6 package / bag"," - ", "32 bag / pallet"],
+            "img": "assets/images/products/mekkoo_3r.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo paper wiper, 2 layer, XXL",
+            "info": "",
+            "weight": "2 pcs",
+            "logistics": ["10 package / bag"," - ", "20 bag / pallet"],
+            "img": "assets/images/products/mekkoo_keztorlo_2xxl.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo paper wiper, 2 layer, Jumbo",
+            "info": "",
+            "weight": "",
+            "logistics": ["6 package / bag"," - ", "32 bag / pallet"],
+            "img": "assets/images/products/mekkoo_torlo_nagy.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo paper wiper, 1 layer, box",
+            "info": "100 pcs",
+            "weight": "",
+            "logistics": ["30 package / carton"," - ", "32 carton / pallet"],
+            "img": "assets/images/products/mekkoo_keztorlo_dobozos.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Cheesy Thaler",
+            "info": "Original and cumin",
+            "weight": "100 g",
+            "logistics": ["12 package / carton"," - ", "100 carton / pallet"],
+            "img": "assets/images/products/sajtos_taller.jpg",
+            "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Győri Édes biscuit, original",
+            "info": "",
+            "weight": "180 g",
+            "logistics": ["21 package / carton"," - ", "54 carton / pallet"],
+            "img": "assets/images/products/gyori_eredeti.jpg",
+            "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Győri Édes biscuit, cocoa",
+            "info": "",
+            "weight": "180 g",
+            "logistics": ["21 package / carton"," - ", "54 carton / pallet"],
+            "img": "assets/images/products/gyori_kakaos.jpg",
+            "category": this.CATEGORIES.OTHERS
         }
         ];
     }

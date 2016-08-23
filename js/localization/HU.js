@@ -32,6 +32,7 @@ export default class Hu {
             CEREALS:{id:"CEREALS", name:"CEREÁLIÁK"},
             SNACKS:{id:"SNACKS", name:"SNACKEK"},
             DRINKS:{id:"DRINKS", name:"ITALOK"},
+            PAPERS:{id:"PAPERS", name:"PAPÍRÁRU"},
             OTHERS:{id:"OTHERS", name:"EGYÉB TERMÉKEK"}
         };
         this.PRODUCT = {
@@ -61,75 +62,155 @@ export default class Hu {
         this.PRODUCTLIST = [
         {
             "name": "S Teasütemény",
-            "info": "This is information abt the product",
+            "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["300 pcs / box", "40 box / pallet"],
+            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"]  ,
             "img": "assets/images/products/s_suti.png",
             "category": this.CATEGORIES.COOKIES
         },
         {
             "name": "Csokis Perec Teasütemény",
-            "info": "This is information abt the product",
+            "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
             "img": "assets/images/products/csokis_perec.png",
             "category": this.CATEGORIES.COOKIES
         },
         {
-            "name": "Cukros Virág Teasütemény",
-            "info": "This is information abt the product",
+            "name": "Petit Teasütemény",
+            "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
+            "img": "assets/images/products/petit.png",
+            "category": this.CATEGORIES.COOKIES
+        },
+        {
+            "name": "Minimix Teasütemény",
+            "info": "Fortexim saját márkás termék",
+            "weight": "140 g",
+            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
+            "img": "assets/images/products/minimix.png",
+            "category": this.CATEGORIES.COOKIES
+        },
+        {
+            "name": "Cukros Virág Teasütemény",
+            "info": "Fortexim saját márkás termék",
+            "weight": "140 g",
+            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
             "img": "assets/images/products/cukros_virag.png",
             "category": this.CATEGORIES.COOKIES
         },
         {
             "name": "Freymas snack",
-            "info": "Termékinformáció",
+            "info": "",
             "weight": "40 g",
-            "logistics": ["100 pcs / box", "100 box / pallet"],
+            "logistics": ["40 doboz / karton"," - ", "40 karton / raklap"],
             "img": "assets/images/products/freymas.png",
             "category": this.CATEGORIES.SNACKS
         },
         {
             "name": "Amulet lúgosított víz pH 9,2",
-            "info": "This is information abt the product",
+            "info": "",
             "weight": "1,5 L",
-            "logistics": ["3000 pcs / box", "40 box / pallet"],
+            "logistics": ["6 db / gyűjtő"," - ", "84 gyűjtő / raklap"],
             "img": "assets/images/products/amulet.png",
             "category": this.CATEGORIES.DRINKS
         },
         {
-            "name": "Pirított napraforgó",
-            "info": "This is information abt the product",
+            "name": "Pirított napraforgó, sós és natúr",
+            "info": ["40g: ","100 csomag / gyűjtő"," - ", "70 gyűjtő / raklap"],
             "weight": "40 g / 100g",
-            "logistics": ["500 pcs / box", "40 box / pallet"],
+            "logistics": ["180g: ","30 csomag / gyűjtő"," - ", "70 gyűjtő / raklap"],
             "img": "assets/images/products/napraforgo.png",
             "category": this.CATEGORIES.OTHERS
         },
         {
             "name": "Gyümölcsízű kukoricapehely",
-            "info": "This is information abt the product",
+            "info": "Extrudált",
             "weight": "40 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["40 csomag / gyűjtő"],
             "img": "assets/images/products/gyumolcs.jpg",
             "category": this.CATEGORIES.CEREALS
         },
         {
             "name": "Sós ízú Puffasztott kukoricapehely",
-            "info": "This is information abt the product",
+            "info": "Extrudált",
             "weight": "70 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["30 csomag / gyűjtő"],
             "img": "assets/images/products/nagysos.jpg",
             "category": this.CATEGORIES.CEREALS
         },
         {
             "name": "Kakaós ízű puffasztott kukoricapehely",
-            "info": "This is information abt the product",
+            "info": "Extrudált",
             "weight": "100 g",
-            "logistics": ["3100 pcs / box", "40 box / pallet"],
+            "logistics": ["35 csomag / gyűjtő"],
             "img": "assets/images/products/kakaos.jpg",
             "category": this.CATEGORIES.CEREALS
+        },
+        {
+            "name": "Mekkoo 2 rétegű wc-papír",
+            "info": "",
+            "weight": "10 db-os",
+            "logistics": ["6 csomag / gyűjtő"," - ", "32 gyűjtő / raklap"],
+            "img": "assets/images/products/mekkoo_2r.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo 3 rétegű wc-papír",
+            "info": "",
+            "weight": "10 db-os",
+            "logistics": ["6 csomag / gyűjtő"," - ", "32 gyűjtő / raklap"],
+            "img": "assets/images/products/mekkoo_3r.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo 3 rétegű törlőkendő XXL",
+            "info": "",
+            "weight": "2 db-os",
+            "logistics": ["10 csomag / gyűjtő"," - ", "20 gyűjtő / raklap"],
+            "img": "assets/images/products/mekkoo_keztorlo_2xxl.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo 2 rétegű törlőkendő Jumbo",
+            "info": "",
+            "weight": "",
+            "logistics": ["6 csomag / gyűjtő"," - ", "32 gyűjtő / raklap"],
+            "img": "assets/images/products/mekkoo_torlo_nagy.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Mekkoo 1 rétegű törlőkendő dobozos",
+            "info": "100 db-os",
+            "weight": "",
+            "logistics": ["30 doboz / karton"," - ", "32 karton / raklap"],
+            "img": "assets/images/products/mekkoo_keztorlo_dobozos.png",
+            "category": this.CATEGORIES.PAPERS
+        },
+        {
+            "name": "Sajtos Tallér",
+            "info": "Natúr és köményes ízben",
+            "weight": "100 g",
+            "logistics": ["12 csomag / karton"," - ", "100 karton / raklap"],
+            "img": "assets/images/products/sajtos_taller.jpg",
+            "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Győri Édes keksz, eredeti",
+            "info": "",
+            "weight": "180 g",
+            "logistics": ["21 csomag / karton"," - ", "54 karton / raklap"],
+            "img": "assets/images/products/gyori_eredeti.jpg",
+            "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Győri Édes keksz, kakaós",
+            "info": "",
+            "weight": "180 g",
+            "logistics": ["21 csomag / karton"," - ", "54 karton / raklap"],
+            "img": "assets/images/products/gyori_kakaos.jpg",
+            "category": this.CATEGORIES.OTHERS
         }
     ];
     }
