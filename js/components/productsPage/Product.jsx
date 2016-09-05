@@ -51,18 +51,19 @@ export default class Products extends React.Component {
     render() {
         return (
             <div ref="product" className={styles.product}>
-            <div className={styles.imgInfoHolder}>
-                <a href={"http://fortexim.hu/"+this.props.data.img} target="_blank"><img ref="img" src={this.props.data.img} alt="product"/></a>
-                <div ref="info" className={styles.info}>
-                    <p>{this.props.data.info}</p>
-                    <p>{this.props.data.logistics}</p>
+                <div className={styles.imgInfoHolder}>
+                    <a href={"http://fortexim.hu/"+this.props.data.img} target="_blank"><img ref="img" src={this.props.data.img} alt="product"/></a>
+                    <div ref="info" className={styles.info}>
+                        <p>{this.props.data.info}</p>
+                        <p>{this.props.data.logistics}</p>
+                    </div>
                 </div>
-            </div>
                 <p className={styles.name} >{this.props.data.name} 
                     <span className={styles.weight}>{this.props.data.weight}</span>
                 </p>
                 <p ref="more" className={styles.more} onClick={this.animateMore.bind(this)}>{this.loc.PRODUCT.MORE}</p>
             </div>
+            
         )
     }
 }

@@ -211,6 +211,30 @@ export default class Hu {
             "logistics": ["21 csomag / karton"," - ", "54 karton / raklap"],
             "img": "assets/images/products/gyori_kakaos.jpg",
             "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "CERKA",
+            "info": "Kakaós ízű töltött ostyarúd",
+            "weight": "30 g",
+            "logistics": ["30 db / 12 henger / 16 karton / raklap"],
+            "img": "assets/images/products/cerka.jpg",
+            "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Mini Ropogós sajtos",
+            "info": "",
+            "weight": "60 g",
+            "logistics": ["18 csomag / 6 gyűjtő / 20 karton / raklap"],
+            "img": "assets/images/products/mini_ropogos.jpg",
+            "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Téli Fagyi",
+            "info": "",
+            "weight": "30 g",
+            "logistics": ["50 db / 80 karton / raklap"],
+            "img": "assets/images/products/teli_fagyi.jpg",
+            "category": this.CATEGORIES.OTHERS
         }
     ];
     }

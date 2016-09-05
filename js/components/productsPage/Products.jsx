@@ -59,9 +59,30 @@ export default class Products extends React.Component {
             .map((product, i) => <Product key={i+Math.random()} data={product} />);
     }
 
+    renderProductInfo(){
+        return <p className={styles.fullProductInfo}>Fortexim private labeled brand</p>;
+    }
+
+    renderLogistics(){
+        return <p className={styles.fullProductInfo}>28 pcs / box</p>;
+    }
+
     render() {
         return (
             <div ref="products" className={styles.productWrapper}>
+                <div className={styles.fullProduct}>
+                    <div className={styles.fullProductWrapper}>
+                        <div className={styles.closeIcon}>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p className={styles.fullProductName}>Cocoa-Pretzel Cookie</p>
+                        <p className={styles.fullProductWeight}>140 g</p>
+                        {this.renderProductInfo()}
+                        {this.renderLogistics()}
+                        <img src="assets/images/products/amulet.png" alt=""/>
+                    </div>
+                </div>
                 <Menu setCategory={this.setCategory.bind(this)}/>
                 <div className={styles.productsContainer}>
                     <div className={styles.productsHolder}>
