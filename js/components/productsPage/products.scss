@@ -60,10 +60,10 @@
 
 .fullProductWrapper {
     position: relative;
-    padding-top: 150px;
+    padding-top: 100px;
     overflow: hidden;
     img {
-        max-height: 360px;
+        max-height: 340px;
         max-width: 500px;
     }
 }
@@ -84,10 +84,15 @@
 
 }
 
+.fullProductDisplay {
+    display: block;
+}
+
 .closeIcon {
+    position: relative;
     height: 50px;
     width: 50px;
-    top: -95px;
+    top: -50px;
     transform: translateX(45vw);
     cursor: pointer;
     z-index: 4;

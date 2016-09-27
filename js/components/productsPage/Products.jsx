@@ -13,7 +13,9 @@ export default class Products extends React.Component {
         this.tl = new TimelineLite();
         this.loc = Localization.getInstance().getDict();
         this.state = {
-            activeCategory: this.loc.CATEGORIES.ALL.id
+            activeCategory: this.loc.CATEGORIES.ALL.id,
+            fullProduct: false,
+            productData: null
         }
 	}
 
@@ -52,11 +54,20 @@ export default class Products extends React.Component {
         this.setState({activeCategory:category});
     }
 
-    renderProduct(){
+    goToFullProduct(data){
+        this.setState({fullProduct: true, productData: data});
+    }
+
+    closeFullProduct(){
+        this.setState({fullProduct: false});
+    }
+
+    renderProductList(){
+        if (this.state.fullProduct === true) {return null};
         // If you add a unique `key` attribute, then the component will remount.
         return this.loc.PRODUCTLIST
             .filter(this.filterProducts.bind(this))
-            .map((product, i) => <Product key={i+Math.random()} data={product} />);
+            .map((product, i) => <Product key={i+Math.random()} data={product} goToFullProduct = {this.goToFullProduct.bind(this)}/>);
     }
 
     renderProductInfo(){
@@ -64,29 +75,37 @@ export default class Products extends React.Component {
     }
 
     renderLogistics(){
-        return <p className={styles.fullProductInfo}>28 pcs / box</p>;
+        return <p className={styles.fullProductInfo}>{this.state.productData.logistics[0]}</p>;
+    }
+
+    renderFullProduct(){
+        if (this.state.fullProduct){
+            return (
+                <div className={(this.state.fullProduct ? styles.fullProductDisplay+" " : "")+styles.fullProduct}>
+                    <div className={styles.fullProductWrapper}>
+                        <div className={styles.closeIcon} onClick={this.closeFullProduct.bind(this)}>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p className={styles.fullProductName}>{this.state.productData.name}</p>
+                        <p className={styles.fullProductWeight}>{this.state.productData.weight}</p>
+                        <p className={styles.fullProductInfo}>{this.state.productData.info}</p>
+                        {this.renderLogistics()}
+                        <a href={"http://fortexim.hu/"+this.state.productData.img} target="_blank"><img src={this.state.productData.img} alt=""/></a>
+                    </div>
+                </div>
+            )
+        } else { return null}
     }
 
     render() {
         return (
             <div ref="products" className={styles.productWrapper}>
-                <div className={styles.fullProduct}>
-                    <div className={styles.fullProductWrapper}>
-                        <div className={styles.closeIcon}>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <p className={styles.fullProductName}>Cocoa-Pretzel Cookie</p>
-                        <p className={styles.fullProductWeight}>140 g</p>
-                        {this.renderProductInfo()}
-                        {this.renderLogistics()}
-                        <img src="assets/images/products/amulet.png" alt=""/>
-                    </div>
-                </div>
+                {this.renderFullProduct()}
                 <Menu setCategory={this.setCategory.bind(this)}/>
                 <div className={styles.productsContainer}>
                     <div className={styles.productsHolder}>
-                        {this.renderProduct()}
+                        {this.renderProductList()}
                     </div>
                 </div>
             </div>

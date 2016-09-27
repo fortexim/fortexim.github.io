@@ -29,6 +29,7 @@ export default class Products extends React.Component {
         TweenMax.to(this.productNode, 0.5, {opacity:1});
     }
 
+
     animateMore() {
         this.tl.clear();
         if (this.info === false) {
@@ -61,7 +62,7 @@ export default class Products extends React.Component {
                 <p className={styles.name} >{this.props.data.name} 
                     <span className={styles.weight}>{this.props.data.weight}</span>
                 </p>
-                <p ref="more" className={styles.more} onClick={this.animateMore.bind(this)}>{this.loc.PRODUCT.MORE}</p>
+                <p ref="more" className={styles.more} onClick={this.props.goToFullProduct.bind(this, this.props.data)}>{this.loc.PRODUCT.MORE}</p>
             </div>
             
         )

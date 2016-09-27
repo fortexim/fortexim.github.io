@@ -34,6 +34,7 @@ export default class Ro {
         this.CATEGORIES = {
             ALL:{id:"ALL", name:"All Products"},
             COOKIES:{id:"COOKIES", name:"COOKIES"},
+            WAFERS:{id:"WAFERS", name:"WAFERS"},
             CEREALS:{id:"CEREALS", name:"CEREALS"},
             SNACKS:{id:"SNACKS", name:"SNACKS"},
             DRINKS:{id:"DRINKS", name:"DRINKS"},
@@ -237,6 +238,78 @@ export default class Ro {
             "logistics": ["50 db / 80 karton / raklap"],
             "img": "assets/images/products/teli_fagyi.jpg",
             "category": this.CATEGORIES.OTHERS
+        },
+        {
+            "name": "Tuti ostya citrom ízű",
+            "info": "Citrom ízű krémmel töltött",
+            "weight": "200 g",
+            "logistics": ["42 db / 50 karton / raklap"],
+            "img": "assets/images/products/tuti_ostya_citrom.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "Tuti ostya kakaós ízű",
+            "info": "Kakaós ízű krémmel töltött",
+            "weight": "200 g",
+            "logistics": ["42 db / 50 karton / raklap"],
+            "img": "assets/images/products/tuti_ostya_kakaos.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "Tuti ostya kakaós-vanília ízű",
+            "info": "Kakaós vaníliás ízű krémmel töltött",
+            "weight": "200 g",
+            "logistics": ["42 db / 50 karton / raklap"],
+            "img": "assets/images/products/tuti_ostya_kakaos_vanilia.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "Tuti EXTRA töltött ostya kakaós ízű",
+            "info": "Kakaós ízű krémmel töltött",
+            "weight": "200 g",
+            "logistics": ["36 db / 50 karton / raklap"],
+            "img": "assets/images/products/tuti_extra_kakaos.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "Tuti EXTRA töltött ostya vanília ízű",
+            "info": "Vaníliaa ízű krémmel töltött",
+            "weight": "200 g",
+            "logistics": ["36 db / 50 karton / raklap"],
+            "img": "assets/images/products/tuti_extra_vanilia.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "ÉT-PARÁNY",
+            "info": "",
+            "weight": "300 g",
+            "logistics": ["20 db / 50 karton / raklap"],
+            "img": "assets/images/products/et_parany_300.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "ÉT-PARÁNY",
+            "info": "",
+            "weight": "200 g",
+            "logistics": ["6 db / 100 gyűjtő / raklap"],
+            "img": "assets/images/products/et_parany_200.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "LÉDIG ÉT-PARÁNY",
+            "info": "",
+            "weight": "3 kg",
+            "logistics": ["60 karton / raklap"],
+            "img": "assets/images/products/ledig_parany.jpg",
+            "category": this.CATEGORIES.WAFERS
+        },
+        {
+            "name": "LÉDIG NÁPOLYI",
+            "info": "",
+            "weight": "6 kg",
+            "logistics": ["60 karton / raklap"],
+            "img": "assets/images/products/ledig_napolyi.jpg",
+            "category": this.CATEGORIES.WAFERS
         }
         ];
     }
