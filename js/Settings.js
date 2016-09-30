@@ -10,3 +10,5 @@ export const LANGUAGES = {
     EN: {id: "EN", quickHash:"en"},
     RO: {id: "RO", quickHash:"ro"}
 }
+
+export const LOADINGTIME = 3000;

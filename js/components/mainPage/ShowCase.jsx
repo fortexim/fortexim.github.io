@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
+import {LOADINGTIME} from '../../Settings';
 import {Localization} from '../../localization/Localization';
 import styles from './showCase.scss';
 
@@ -15,7 +16,12 @@ export default class ShowCase extends React.Component {
         this.state = {
             activeProduct: this.activeProduct
         }
-        this.rotateProducts();
+    }
+
+    componentDidMount() {
+        window.setTimeout(() => {
+            this.rotateProducts();
+        }, LOADINGTIME);
     }
 
     componentWillUpdate(){
