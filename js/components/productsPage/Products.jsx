@@ -5,6 +5,7 @@ import {TweenMax, TimelineLite} from 'gsap';
 import Product from './Product.jsx';
 import Menu from './Menu.jsx';
 import {Localization} from '../../localization/Localization';
+import AjaxUtility from '../../libs/ajax';
 import styles from './products.scss';
 
 export default class Products extends React.Component {
@@ -17,6 +18,8 @@ export default class Products extends React.Component {
             fullProduct: false,
             productData: null
         }
+        this.state.partialsData = null;
+        this.xhrSuccess = false;
 	}
 
     componentWillUpdate(){
@@ -70,12 +73,27 @@ export default class Products extends React.Component {
             .map((product, i) => <Product key={i+Math.random()} data={product} goToFullProduct = {this.goToFullProduct.bind(this)}/>);
     }
 
-    renderProductInfo(){
-        return <p className={styles.fullProductInfo}>Fortexim private labeled brand</p>;
+    renderLogistics(){
+        return this.state.productData.logistics.map((item,i ) => <p key={i}>{item}</p>);
     }
 
-    renderLogistics(){
-        return <p className={styles.fullProductInfo}>{this.state.productData.logistics[0]}</p>;
+    renderRows() {
+        if (this.state.productData.row1) {
+            let url = "assets/partials/"+this.state.productData.row1;
+            let util = new AjaxUtility(this);
+            let success =  (data) => {
+                this.xhrSuccess = true;
+                this.setState({partialsData: data});
+            }
+            let fail = function() {
+                console.log('failed loading partial');
+            }
+            if (this.xhrSuccess===false) {
+                util.ajaxRequest(url, success, fail);
+            }
+            
+            return <div className={styles.row1} dangerouslySetInnerHTML={{__html:this.state.partialsData}} />;
+        } else {return null};
     }
 
     renderFullProduct(){
@@ -88,10 +106,18 @@ export default class Products extends React.Component {
                             <span></span>
                         </div>
                         <p className={styles.fullProductName}>{this.state.productData.name}</p>
-                        <p className={styles.fullProductWeight}>{this.state.productData.weight}</p>
-                        <p className={styles.fullProductInfo}>{this.state.productData.info}</p>
-                        {this.renderLogistics()}
-                        <a href={"http://fortexim.hu/"+this.state.productData.img} target="_blank"><img src={this.state.productData.img} alt=""/></a>
+                        <div className={styles.product}>
+                            <div className={styles.content}>
+                                <p className={styles.fullProductWeight}><span>{this.loc.PRODUCT.WEIGHT+" "}</span>{this.state.productData.weight}</p>
+                                <p className={styles.fullProductInfo}>{this.state.productData.info}</p>
+                                <div className={styles.logistics}><div>{this.loc.PRODUCT.LOGISTICS}</div>
+                                    {this.renderLogistics()}
+                                </div>
+                                
+                            </div>
+                            <a href={"http://fortexim.hu/"+this.state.productData.img} target="_blank"><img src={this.state.productData.img} alt=""/></a>
+                        </div>
+                        {this.renderRows()}
                     </div>
                 </div>
             )

@@ -29,7 +29,9 @@ export default class En {
         }
         this.PRODUCT = {
             PICTURES: "Pictures",
-            MORE: "More Information"
+            MORE: "More Information",
+            WEIGHT: "Weight:",
+            LOGISTICS: "Logistics:"
         }
         this.CATEGORIES = {
             ALL:{id:"ALL", name:"All Products"},
@@ -42,6 +44,12 @@ export default class En {
             OTHERS:{id:"OTHERS", name:"OTHERS"}
         };
         this.SHOWCASEPRODUCTS = [
+            {
+                "name": "SMILE Pancake",
+                "weight": "40 g",
+                "featuredImg":"assets/images/products/smile_front.png",
+                "featuredColor":"#FF8705",
+            },
             {
                 "name": "Fortexim Cookies",
                 "weight": "150 g",
@@ -62,6 +70,15 @@ export default class En {
             }
         ];
         this.PRODUCTLIST = [
+        {
+            "name": "SMILE Pancake",
+            "info": "",
+            "weight": "40 g",
+            "logistics": ["6 pcs / box", "240 box / pallet"],
+            "img": "assets/images/products/smile_front.png",
+            "row1": 'smile_en.html',
+            "category": this.CATEGORIES.COOKIES
+        },
         {
             "name": "S Cookie",
             "info": "Fortexim private labeled brand",
@@ -120,9 +137,9 @@ export default class En {
         },
         {
             "name": "Browned Sunflower Seed, salted and original",
-            "info": ["40g: ","100 pcs / box", "70 box / pallet"],
-            "weight": "40g/100g",
-            "logistics": ["180g: ","30 pcs / box", "70 box / pallet"],
+            "info": [],
+            "weight": "40g / 180g",
+            "logistics": ["180g: ","30 pcs / box", "70 box / pallet","40g: ","100 pcs / box", "70 box / pallet"],
             "img": "assets/images/products/napraforgo.png",
             "category": this.CATEGORIES.OTHERS
         },
@@ -218,7 +235,7 @@ export default class En {
             "name": "CERKA",
             "info": "Kakaós ízű töltött ostyarúd",
             "weight": "30 g",
-            "logistics": ["30 db / 12 henger / 16 karton / raklap"],
+            "logistics": ["30 pcs / 12 cylinder / 16 carton / pallet"],
             "img": "assets/images/products/cerka.jpg",
             "category": this.CATEGORIES.OTHERS
         },
@@ -226,7 +243,7 @@ export default class En {
             "name": "Mini Ropogós sajtos",
             "info": "",
             "weight": "60 g",
-            "logistics": ["18 csomag / 6 gyűjtő / 20 karton / raklap"],
+            "logistics": ["18 pcs / 6 box / 20 carton / pallet"],
             "img": "assets/images/products/mini_ropogos.jpg",
             "category": this.CATEGORIES.OTHERS
         },
@@ -234,7 +251,7 @@ export default class En {
             "name": "Téli Fagyi",
             "info": "",
             "weight": "30 g",
-            "logistics": ["50 db / 80 karton / raklap"],
+            "logistics": ["50 pcs / 80 box / pallet"],
             "img": "assets/images/products/teli_fagyi.jpg",
             "category": this.CATEGORIES.OTHERS
         },
@@ -242,7 +259,7 @@ export default class En {
             "name": "Tuti ostya citrom ízű",
             "info": "Citrom ízű krémmel töltött",
             "weight": "200 g",
-            "logistics": ["42 db / 50 karton / raklap"],
+            "logistics": ["42 pcs / 50 box / pallet"],
             "img": "assets/images/products/tuti_ostya_citrom.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -250,7 +267,7 @@ export default class En {
             "name": "Tuti ostya kakaós ízű",
             "info": "Kakaós ízű krémmel töltött",
             "weight": "200 g",
-            "logistics": ["42 db / 50 karton / raklap"],
+            "logistics": ["42 pcs / 50 box / pallet"],
             "img": "assets/images/products/tuti_ostya_kakaos.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -258,7 +275,7 @@ export default class En {
             "name": "Tuti ostya kakaós-vanília ízű",
             "info": "Kakaós vaníliás ízű krémmel töltött",
             "weight": "200 g",
-            "logistics": ["42 db / 50 karton / raklap"],
+            "logistics": ["42 pcs / 50 box / pallet"],
             "img": "assets/images/products/tuti_ostya_kakaos_vanilia.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -266,15 +283,15 @@ export default class En {
             "name": "Tuti EXTRA töltött ostya kakaós ízű",
             "info": "Kakaós ízű krémmel töltött",
             "weight": "200 g",
-            "logistics": ["36 db / 50 karton / raklap"],
+            "logistics": ["36 pcs / 50 box / pallet"],
             "img": "assets/images/products/tuti_extra_kakaos.jpg",
             "category": this.CATEGORIES.WAFERS
         },
         {
             "name": "Tuti EXTRA töltött ostya vanília ízű",
-            "info": "Vaníliaa ízű krémmel töltött",
+            "info": "Vanília ízű krémmel töltött",
             "weight": "200 g",
-            "logistics": ["36 db / 50 karton / raklap"],
+            "logistics": ["36 pcs / 50 box / pallet"],
             "img": "assets/images/products/tuti_extra_vanilia.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -282,7 +299,7 @@ export default class En {
             "name": "ÉT-PARÁNY",
             "info": "",
             "weight": "300 g",
-            "logistics": ["20 db / 50 karton / raklap"],
+            "logistics": ["20 pcs / 50 box / pallet"],
             "img": "assets/images/products/et_parany_300.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -290,7 +307,7 @@ export default class En {
             "name": "ÉT-PARÁNY",
             "info": "",
             "weight": "200 g",
-            "logistics": ["6 db / 100 gyűjtő / raklap"],
+            "logistics": ["6 pcs / 100 box / pallet"],
             "img": "assets/images/products/et_parany_200.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -298,7 +315,7 @@ export default class En {
             "name": "LÉDIG ÉT-PARÁNY",
             "info": "",
             "weight": "3 kg",
-            "logistics": ["60 karton / raklap"],
+            "logistics": ["60 carton / pallet"],
             "img": "assets/images/products/ledig_parany.jpg",
             "category": this.CATEGORIES.WAFERS
         },
@@ -306,7 +323,7 @@ export default class En {
             "name": "LÉDIG NÁPOLYI",
             "info": "",
             "weight": "6 kg",
-            "logistics": ["60 karton / raklap"],
+            "logistics": ["60 carton / pallet"],
             "img": "assets/images/products/ledig_napolyi.jpg",
             "category": this.CATEGORIES.WAFERS
         }

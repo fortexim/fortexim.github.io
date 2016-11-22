@@ -29,7 +29,9 @@ export default class Ro {
         }
         this.PRODUCT = {
             PICTURES: "Pictures",
-            MORE: "More Information"
+            MORE: "More Information",
+            WEIGHT: "Weight:",
+            LOGISTICS: "Logistics:"
         }
         this.CATEGORIES = {
             ALL:{id:"ALL", name:"All Products"},
@@ -43,6 +45,12 @@ export default class Ro {
         };
 
         this.SHOWCASEPRODUCTS = [
+            {
+                "name": "SMILE Pancake",
+                "weight": "40 g",
+                "featuredImg":"assets/images/products/smile_front.png",
+                "featuredColor":"#FF8705",
+            },
             {
                 "name": "Fortexim Cookies",
                 "weight": "150 g",
@@ -63,6 +71,15 @@ export default class Ro {
             }
         ];
          this.PRODUCTLIST = [
+        {
+            "name": "SMILE Pancake",
+            "info": "",
+            "weight": "40 g",
+            "logistics": ["6 pcs / box", "240 box / pallet"],
+            "img": "assets/images/products/smile_front.png",
+            "row1": 'smile_en.html',
+            "category": this.CATEGORIES.COOKIES
+        },
         {
             "name": "S Cookie",
             "info": "Fortexim private labeled brand",

@@ -9,6 +9,7 @@ export default class Loader extends React.Component {
         this.assets = {
             images: [
 				"assets/images/products/s_suti.png",
+				"assets/images/products/smile_front.png",
 				"assets/images/products/freymas.png",
 				"assets/images/products/amulet.png",
                 "/assets/images/ship.jpg",

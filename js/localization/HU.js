@@ -38,9 +38,17 @@ export default class Hu {
         };
         this.PRODUCT = {
             PICTURES: "Képek",
-            MORE: "További Információk"
+            MORE: "További Információk",
+            WEIGHT: "Tömeg:",
+            LOGISTICS: "Logisztika:"
         }
         this.SHOWCASEPRODUCTS = [
+            {
+                "name": "SMILE palacsinta",
+                "weight": "40 g",
+                "featuredImg":"assets/images/products/smile_front.png",
+                "featuredColor":"#FF8705",
+            },
             {
                 "name": "Fortexim Teasütemények",
                 "weight": "140 g",
@@ -62,10 +70,20 @@ export default class Hu {
         ];
         this.PRODUCTLIST = [
         {
+            "name": "SMILE palacsinta",
+            "info": "",
+            "weight": "40 g",
+            "logistics": ["6 db / karton", "240 karton / raklap"],
+            "img": "assets/images/products/smile_front.png",
+            "row1": 'smile_hu.html',
+            "category": this.CATEGORIES.COOKIES
+        },
+        {
             "name": "S Teasütemény",
             "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"]  ,
+            "logistics": ["28 doboz / karton", "54 karton / raklap"]  ,
+
             "img": "assets/images/products/s_suti.png",
             "category": this.CATEGORIES.COOKIES
         },
@@ -73,7 +91,8 @@ export default class Hu {
             "name": "Csokis Perec Teasütemény",
             "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
+            "logistics": ["28 doboz / karton", "54 karton / raklap"],
+
             "img": "assets/images/products/csokis_perec.png",
             "category": this.CATEGORIES.COOKIES
         },
@@ -81,7 +100,8 @@ export default class Hu {
             "name": "Petit Teasütemény",
             "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
+            "logistics": ["28 doboz / karton",, "54 karton / raklap"],
+
             "img": "assets/images/products/petit.png",
             "category": this.CATEGORIES.COOKIES
         },
@@ -89,7 +109,8 @@ export default class Hu {
             "name": "Minimix Teasütemény",
             "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
+            "logistics": ["28 doboz / karton", "54 karton / raklap"],
+
             "img": "assets/images/products/minimix.png",
             "category": this.CATEGORIES.COOKIES
         },
@@ -97,7 +118,8 @@ export default class Hu {
             "name": "Cukros Virág Teasütemény",
             "info": "Fortexim saját márkás termék",
             "weight": "140 g",
-            "logistics": ["28 doboz / karton"," - ", "54 karton / raklap"],
+            "logistics": ["28 doboz / karton", "54 karton / raklap"],
+
             "img": "assets/images/products/cukros_virag.png",
             "category": this.CATEGORIES.COOKIES
         },
@@ -105,7 +127,8 @@ export default class Hu {
             "name": "Freymas snack",
             "info": "",
             "weight": "40 g",
-            "logistics": ["40 doboz / karton"," - ", "40 karton / raklap"],
+            "logistics": ["40 doboz / karton", "40 karton / raklap"],
+
             "img": "assets/images/products/freymas.png",
             "category": this.CATEGORIES.SNACKS
         },
@@ -113,15 +136,17 @@ export default class Hu {
             "name": "Amulet lúgosított víz pH 9,2",
             "info": "",
             "weight": "1,5 L",
-            "logistics": ["6 db / gyűjtő"," - ", "84 gyűjtő / raklap"],
+            "logistics": ["6 db / gyűjtő", "84 gyűjtő / raklap"],
             "img": "assets/images/products/amulet.png",
             "category": this.CATEGORIES.DRINKS
         },
         {
             "name": "Pirított napraforgó, sós és natúr",
-            "info": ["40g: ","100 csomag / gyűjtő"," - ", "70 gyűjtő / raklap"],
-            "weight": "40 g / 100g",
-            "logistics": ["180g: ","30 csomag / gyűjtő"," - ", "70 gyűjtő / raklap"],
+            "info": [],
+
+            "weight": "40g / 180g",
+            "logistics": ["180g: ","30 csomag / gyűjtő", "70 gyűjtő / raklap","40g: ","100 csomag / gyűjtő", "70 gyűjtő / raklap"],
+
             "img": "assets/images/products/napraforgo.png",
             "category": this.CATEGORIES.OTHERS
         },
@@ -153,7 +178,8 @@ export default class Hu {
             "name": "Mekkoo 2 rétegű wc-papír",
             "info": "",
             "weight": "10 db-os",
-            "logistics": ["6 csomag / gyűjtő"," - ", "32 gyűjtő / raklap"],
+            "logistics": ["6 csomag / gyűjtő", "32 gyűjtő / raklap"],
+
             "img": "assets/images/products/mekkoo_2r.png",
             "category": this.CATEGORIES.PAPERS
         },
@@ -161,7 +187,8 @@ export default class Hu {
             "name": "Mekkoo 3 rétegű wc-papír",
             "info": "",
             "weight": "10 db-os",
-            "logistics": ["6 csomag / gyűjtő"," - ", "32 gyűjtő / raklap"],
+            "logistics": ["6 csomag / gyűjtő", "32 gyűjtő / raklap"],
+
             "img": "assets/images/products/mekkoo_3r.png",
             "category": this.CATEGORIES.PAPERS
         },
@@ -169,7 +196,8 @@ export default class Hu {
             "name": "Mekkoo 3 rétegű törlőkendő XXL",
             "info": "",
             "weight": "2 db-os",
-            "logistics": ["10 csomag / gyűjtő"," - ", "20 gyűjtő / raklap"],
+            "logistics": ["10 csomag / gyűjtő", "20 gyűjtő / raklap"],
+
             "img": "assets/images/products/mekkoo_keztorlo_2xxl.png",
             "category": this.CATEGORIES.PAPERS
         },
@@ -177,7 +205,8 @@ export default class Hu {
             "name": "Mekkoo 2 rétegű törlőkendő Jumbo",
             "info": "",
             "weight": "",
-            "logistics": ["6 csomag / gyűjtő"," - ", "32 gyűjtő / raklap"],
+            "logistics": ["6 csomag / gyűjtő", "32 gyűjtő / raklap"],
+
             "img": "assets/images/products/mekkoo_torlo_nagy.png",
             "category": this.CATEGORIES.PAPERS
         },
@@ -185,7 +214,8 @@ export default class Hu {
             "name": "Mekkoo 1 rétegű törlőkendő dobozos",
             "info": "100 db-os",
             "weight": "",
-            "logistics": ["30 doboz / karton"," - ", "32 karton / raklap"],
+            "logistics": ["30 doboz / karton", "32 karton / raklap"],
+
             "img": "assets/images/products/mekkoo_keztorlo_dobozos.png",
             "category": this.CATEGORIES.PAPERS
         },
@@ -193,7 +223,8 @@ export default class Hu {
             "name": "Sajtos Tallér",
             "info": "Natúr és köményes ízben",
             "weight": "100 g",
-            "logistics": ["12 csomag / karton"," - ", "100 karton / raklap"],
+            "logistics": ["12 csomag / karton", "100 karton / raklap"],
+
             "img": "assets/images/products/sajtos_taller.jpg",
             "category": this.CATEGORIES.OTHERS
         },
@@ -201,7 +232,8 @@ export default class Hu {
             "name": "Győri Édes keksz, eredeti",
             "info": "",
             "weight": "180 g",
-            "logistics": ["21 csomag / karton"," - ", "54 karton / raklap"],
+            "logistics": ["21 csomag / karton", "54 karton / raklap"],
+
             "img": "assets/images/products/gyori_eredeti.jpg",
             "category": this.CATEGORIES.OTHERS
         },
@@ -209,7 +241,8 @@ export default class Hu {
             "name": "Győri Édes keksz, kakaós",
             "info": "",
             "weight": "180 g",
-            "logistics": ["21 csomag / karton"," - ", "54 karton / raklap"],
+            "logistics": ["21 csomag / karton", "54 karton / raklap"],
+
             "img": "assets/images/products/gyori_kakaos.jpg",
             "category": this.CATEGORIES.OTHERS
         },
@@ -271,7 +304,7 @@ export default class Hu {
         },
         {
             "name": "Tuti EXTRA töltött ostya vanília ízű",
-            "info": "Vaníliaa ízű krémmel töltött",
+            "info": "Vanília ízű krémmel töltött",
             "weight": "200 g",
             "logistics": ["36 db / 50 karton / raklap"],
             "img": "assets/images/products/tuti_extra_vanilia.jpg",
