@@ -7,7 +7,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var dir_js = path.resolve(__dirname, 'js');
 var dir_html = path.resolve(__dirname, 'html');
-var dir_build = path.resolve(__dirname, 'docs');
+var dir_build = path.resolve(__dirname, 'build');
 
 module.exports = {
     entry: path.resolve(dir_js, 'main.js'),
