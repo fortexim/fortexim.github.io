@@ -40,12 +40,7 @@ export default class Hu {
     };
     this.CATEGORIES = {
       ALL: { id: "ALL", name: "MINDEN TERMÉK" },
-      COOKIES: { id: "COOKIES", name: "SÜTEMÉNYEK" },
-      WAFERS: { id: "WAFERS", name: "NÁPOLYIK" },
-      CEREALS: { id: "CEREALS", name: "CEREÁLIÁK" },
-      SNACKS: { id: "SNACKS", name: "SNACKEK" },
       DRINKS: { id: "DRINKS", name: "ITALOK" },
-      PAPERS: { id: "PAPERS", name: "PAPÍRÁRU" },
       OTHERS: { id: "OTHERS", name: "EGYÉB TERMÉKEK" },
     };
     this.PRODUCT = {
@@ -71,7 +66,23 @@ export default class Hu {
         logistics: ["6 db / gyűjtő", "84 gyűjtő / raklap"],
         img: "assets/images/products/elixiw.png",
         category: this.CATEGORIES.DRINKS,
-      }
+      },
+      {
+        name: "Home Fresh Lemon mosogatószer",
+        info: "",
+        weight: "1 L",
+        logistics: [""],
+        img: "assets/images/products/home_fresh.png",
+        category: this.CATEGORIES.OTHERS,
+      },
+      {
+        name: "Boom Narancs és Menta Krémszappan",
+        info: "",
+        weight: "1 L",
+        logistics: [""],
+        img: "assets/images/products/boom_narancs_menta.png",
+        category: this.CATEGORIES.OTHERS,
+      }  
     ];
   }
 }
