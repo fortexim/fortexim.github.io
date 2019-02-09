@@ -41,6 +41,7 @@ export default class Hu {
     this.CATEGORIES = {
       ALL: { id: "ALL", name: "MINDEN TERMÉK" },
       DRINKS: { id: "DRINKS", name: "ITALOK" },
+      WASH: {id: "WASH", name: "MOSÓSZEREK"},
       OTHERS: { id: "OTHERS", name: "EGYÉB TERMÉKEK" },
     };
     this.PRODUCT = {
@@ -51,14 +52,51 @@ export default class Hu {
     };
     this.SHOWCASEPRODUCTS = [
       {
-        name: "Elixiw Aqua lúgosított víz pH 9,2",
-        weight: "1.5 L",
-        featuredImg: "assets/images/products/elixiw.png",
-        featuredColor: "mediumvioletred",
-      }
+        name: "Herbow mosódiós labda",
+        weight: "5 mosáshoz",
+        featuredImg: "assets/images/products/mosodio.png",
+        featuredColor: "#8DAF9E",
+      },
+      {
+  name: "Herbow mosóparfüm",
+  weight: "200 ml",
+  featuredImg: "assets/images/products/parfum.png",
+  featuredColor: "mediumvioletred",
+      },
+      {
+        name: "Herbow folyékony mosószer",
+        weight: "1 L",
+        featuredImg: "assets/images/products/folyekony.png",
+        featuredColor: "#AF6D3E",
+        }
+      
 
     ];
     this.PRODUCTLIST = [
+      {
+        name: "Herbow mosódiós labda",
+        info: "5 mosáshoz elegendő",
+        weight: "",
+        logistics: [""],
+        img: "assets/images/products/mosodio.png",
+        category: this.CATEGORIES.WASH,
+      },
+      {
+        name: "Herbow mosóparfüm",
+        info: "40 mosáshoz elegendő",
+        weight: "200 ml",
+        logistics: [""],
+        img: "assets/images/products/parfum.png",
+        category: this.CATEGORIES.WASH,
+      },
+      {
+        name: "Herbow folyékony mosószer",
+        info: "33 mosáshoz elegendő",
+        weight: "1 L",
+        logistics: [""],
+        img: "assets/images/products/folyekony.png",
+        category: this.CATEGORIES.WASH,
+      },
       {
         name: "Elixiw Aqua lúgosított víz pH 9,2",
         info: "",

@@ -22525,6 +22525,7 @@
 	  this.CATEGORIES = {
 	    ALL: { id: "ALL", name: "MINDEN TERMÉK" },
 	    DRINKS: { id: "DRINKS", name: "ITALOK" },
+	    WASH: { id: "WASH", name: "MOSÓSZEREK" },
 	    OTHERS: { id: "OTHERS", name: "EGYÉB TERMÉKEK" }
 	  };
 	  this.PRODUCT = {
@@ -22534,12 +22535,43 @@
 	    LOGISTICS: "Logisztika:"
 	  };
 	  this.SHOWCASEPRODUCTS = [{
-	    name: "Elixiw Aqua lúgosított víz pH 9,2",
-	    weight: "1.5 L",
-	    featuredImg: "assets/images/products/elixiw.png",
+	    name: "Herbow mosódiós labda",
+	    weight: "5 mosáshoz",
+	    featuredImg: "assets/images/products/mosodio.png",
+	    featuredColor: "#8DAF9E"
+	  }, {
+	    name: "Herbow mosóparfüm",
+	    weight: "200 ml",
+	    featuredImg: "assets/images/products/parfum.png",
 	    featuredColor: "mediumvioletred"
+	  }, {
+	    name: "Herbow folyékony mosószer",
+	    weight: "1 L",
+	    featuredImg: "assets/images/products/folyekony.png",
+	    featuredColor: "#AF6D3E"
 	  }];
 	  this.PRODUCTLIST = [{
+	    name: "Herbow mosódiós labda",
+	    info: "5 mosáshoz elegendő",
+	    weight: "",
+	    logistics: [""],
+	    img: "assets/images/products/mosodio.png",
+	    category: this.CATEGORIES.WASH
+	  }, {
+	    name: "Herbow mosóparfüm",
+	    info: "40 mosáshoz elegendő",
+	    weight: "200 ml",
+	    logistics: [""],
+	    img: "assets/images/products/parfum.png",
+	    category: this.CATEGORIES.WASH
+	  }, {
+	    name: "Herbow folyékony mosószer",
+	    info: "33 mosáshoz elegendő",
+	    weight: "1 L",
+	    logistics: [""],
+	    img: "assets/images/products/folyekony.png",
+	    category: this.CATEGORIES.WASH
+	  }, {
 	    name: "Elixiw Aqua lúgosított víz pH 9,2",
 	    info: "",
 	    weight: "1,5 L",
@@ -22616,16 +22648,48 @@
 	  this.CATEGORIES = {
 	    ALL: { id: "ALL", name: "All Products" },
 	    DRINKS: { id: "DRINKS", name: "DRINKS" },
+	    WASH: { id: "WASH", name: "MOSÓSZEREK" },
 	    OTHERS: { id: "OTHERS", name: "OTHERS" }
 	  };
 	
 	  this.SHOWCASEPRODUCTS = [{
-	    name: "Elixiw Aqua alkaline water pH 9.2",
-	    weight: "1.5 L",
-	    featuredImg: "assets/images/products/elixiw.png",
+	    name: "Herbow minge nucă de spălat",
+	    weight: "5 spălări",
+	    featuredImg: "assets/images/products/mosodio.png",
+	    featuredColor: "#8DAF9E"
+	  }, {
+	    name: "Herbow parfumuri de spalare",
+	    weight: "200 ml",
+	    featuredImg: "assets/images/products/parfum.png",
 	    featuredColor: "mediumvioletred"
+	  }, {
+	    name: "Herbow detergent lichid",
+	    weight: "1 L",
+	    featuredImg: "assets/images/products/folyekony.png",
+	    featuredColor: "#AF6D3E"
 	  }];
 	  this.PRODUCTLIST = [{
+	    name: "Herbow minge nucă de spălat",
+	    info: "5 spălări",
+	    weight: "",
+	    logistics: [""],
+	    img: "assets/images/products/mosodio.png",
+	    category: this.CATEGORIES.WASH
+	  }, {
+	    name: "Herbow parfumuri de spalare",
+	    info: "40 spălări",
+	    weight: "200 ml",
+	    logistics: [""],
+	    img: "assets/images/products/parfum.png",
+	    category: this.CATEGORIES.WASH
+	  }, {
+	    name: "Herbow detergent lichid",
+	    info: "33 spălări",
+	    weight: "1 L",
+	    logistics: [""],
+	    img: "assets/images/products/folyekony.png",
+	    category: this.CATEGORIES.WASH
+	  }, {
 	    name: "Elixiw Aqua alkaline water pH 9,2",
 	    info: "",
 	    weight: "1,5 L",

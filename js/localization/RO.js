@@ -40,18 +40,56 @@ export default class Ro {
     this.CATEGORIES = {
       ALL: { id: "ALL", name: "All Products" },
       DRINKS: { id: "DRINKS", name: "DRINKS" },
+      WASH: {id: "WASH", name: "MOSÓSZEREK"},
       OTHERS: { id: "OTHERS", name: "OTHERS" },
     };
 
     this.SHOWCASEPRODUCTS = [
       {
-        name: "Elixiw Aqua alkaline water pH 9.2",
-        weight: "1.5 L",
-        featuredImg: "assets/images/products/elixiw.png",
-        featuredColor: "mediumvioletred",
+        name: "Herbow minge nucă de spălat",
+        weight: "5 spălări",
+        featuredImg: "assets/images/products/mosodio.png",
+        featuredColor: "#8DAF9E",
+      },
+      {
+  name: "Herbow parfumuri de spalare",
+  weight: "200 ml",
+  featuredImg: "assets/images/products/parfum.png",
+  featuredColor: "mediumvioletred",
+      },
+      {
+        name: "Herbow detergent lichid",
+        weight: "1 L",
+        featuredImg: "assets/images/products/folyekony.png",
+        featuredColor: "#AF6D3E",
       }
+        
     ];
     this.PRODUCTLIST = [
+      {
+        name: "Herbow minge nucă de spălat",
+        info: "5 spălări",
+        weight: "",
+        logistics: [""],
+        img: "assets/images/products/mosodio.png",
+        category: this.CATEGORIES.WASH,
+      },
+      {
+        name: "Herbow parfumuri de spalare",
+        info: "40 spălări",
+        weight: "200 ml",
+        logistics: [""],
+        img: "assets/images/products/parfum.png",
+        category: this.CATEGORIES.WASH,
+      },
+      {
+        name: "Herbow detergent lichid",
+        info: "33 spălări",
+        weight: "1 L",
+        logistics: [""],
+        img: "assets/images/products/folyekony.png",
+        category: this.CATEGORIES.WASH,
+      },
       {
         name: "Elixiw Aqua alkaline water pH 9,2",
         info: "",
